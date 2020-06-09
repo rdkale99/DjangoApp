@@ -114,7 +114,7 @@ def calculate(request):
     P1_Mass = float(request.POST["P1_Mass"])
     P1_Wax1 = float(request.POST["P1_Wax1"])
     
-    P1_Mass = P1_Var1+(P1_Var2*30/10000)+P1_Var3+P1_Impurities
+    P1_Mass = P1_Var1+(P1_Var2*30/100000)+P1_Var3+P1_Impurities
 
     
     ##################
@@ -127,7 +127,7 @@ def calculate(request):
     P2_Wax1 = float(request.POST["P2_Wax1"])
 
     
-    P2_Mass = P2_Var1+(P2_Var2*30/10000)+P2_Var3+P2_Impurities
+    P2_Mass = P2_Var1+(P2_Var2*30/100000)+P2_Var3+P2_Impurities
 
     
     ##################
@@ -140,7 +140,7 @@ def calculate(request):
     P3_Wax1 = float(request.POST["P3_Wax1"])
 
    
-    P3_Mass = P3_Var1+(P3_Var2*30/10000)+P3_Var3+P3_Impurities
+    P3_Mass = P3_Var1+(P3_Var2*30/100000)+P3_Var3+P3_Impurities
 
     ##################
 
@@ -152,7 +152,7 @@ def calculate(request):
     P4_Wax1 = float(request.POST["P4_Wax1"])
 
     
-    P4_Mass = P4_Var1+(P4_Var2*30/10000)+P4_Var3+P4_Impurities
+    P4_Mass = P4_Var1+(P4_Var2*30/100000)+P4_Var3+P4_Impurities
 
     
     ##################
@@ -165,7 +165,7 @@ def calculate(request):
     P5_Wax1 = float(request.POST["P5_Wax1"])
 
     
-    P5_Mass = P5_Var1+(P5_Var2*30/10000)+P5_Var3+P5_Impurities
+    P5_Mass = P5_Var1+(P5_Var2*30/100000)+P5_Var3+P5_Impurities
 
     
     ##################
@@ -178,7 +178,7 @@ def calculate(request):
     P6_Wax1 = float(request.POST["P6_Wax1"])
 
     
-    P6_Mass = P6_Var1+(P6_Var2*30/10000)+P6_Var3+P6_Impurities
+    P6_Mass = P6_Var1+(P6_Var2*30/100000)+P6_Var3+P6_Impurities
 
     
     ##################
