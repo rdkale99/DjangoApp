@@ -4,9 +4,195 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="{% static 'css/css1.css' %}">
-	<script type="text/javascript" src="{% static 'js/hideshow.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/oiltype.js' %}"></script>
-	<script type="text/javascript" src="{% static 'js/refreshoil.js' %}"></script>
+
+<script type="text/javascript">
+  function autoFill() {
+    document.getElementById('1').value = 1028;
+    document.getElementById('2').value = 350;
+    document.getElementById('3').value = 69789;
+    document.getElementById('4').value = 6000;
+    document.getElementById('5').value = 1;
+    document.getElementById('6').value = 0;
+    document.getElementById('7').value = 0;
+    document.getElementById('8').value = 0;
+    document.getElementById('9').value = 0;
+    document.getElementById('10').value =0;
+    document.getElementById('11').value =20;
+    document.getElementById('12').value =1179;
+    document.getElementById('13').value =0;
+    document.getElementById('14').value =0;
+    document.getElementById('15').value =350;
+    document.getElementById('16').value =100;
+    document.getElementById('17').value =1.15;
+    document.getElementById('18').value =1.15;
+    document.getElementById('19').value =1.15;
+    document.getElementById('20').value =1.15;
+    document.getElementById('21').value =0.07;
+    document.getElementById('22').value =0.07;
+    document.getElementById('23').value =0.05;
+    document.getElementById('24').value =225;
+    document.getElementById('25').value =20;
+    document.getElementById('26').value =20;
+    document.getElementById('27').value =20;
+    document.getElementById('28').value =0;
+    document.getElementById('29').value =0;
+    document.getElementById('30').value =0;
+    document.getElementById('31').value =0.3;
+    document.getElementById('32').value =0.3;
+    document.getElementById('33').value =0.3;
+    document.getElementById('34').value =0.3;
+    document.getElementById('35').value =0;
+    document.getElementById('36').value =0;
+    document.getElementById('37').value =0;
+    document.getElementById('38').value =0.2;
+    document.getElementById('39').value =0.2;
+    document.getElementById('40').value =0.2;
+    document.getElementById('41').value =0.2;
+    document.getElementById('42').value =0;
+    document.getElementById('43').value =0;
+    document.getElementById('44').value =0;
+    document.getElementById('45').value =0;
+    document.getElementById('46').value =0;
+    document.getElementById('47').value =0;
+    document.getElementById('48').value =0;
+    document.getElementById('49').value =0;
+    document.getElementById('50').value =0;
+    document.getElementById('51').value =2000;
+    document.getElementById('52').value =500;
+    document.getElementById('53').value =500;
+    document.getElementById('54').value =500;
+    document.getElementById('55').value =500;
+    document.getElementById('56').value =500;
+    document.getElementById('57').value =38;
+    document.getElementById('58').value =40;
+    document.getElementById('59').value =0;
+    document.getElementById('60').value =0;
+    document.getElementById('61').value =0;
+    document.getElementById('62').value =0;
+    document.getElementById('63').value =30;
+    document.getElementById('64').value =25;
+    document.getElementById('65').value =77;
+    document.getElementById('66').value =60;
+    document.getElementById('67').value =100;
+    document.getElementById('68').value =30;
+    document.getElementById('69').value =5;
+    document.getElementById('70').value =5;
+    document.getElementById('71').value =12;
+    document.getElementById('72').value =12;
+    document.getElementById('73').value =0;
+    document.getElementById('74').value =0;
+    document.getElementById('75').value =10;
+    document.getElementById('76').value =10;
+    document.getElementById('77').value =10;
+    document.getElementById('78').value =10;
+    document.getElementById('79').value =0;
+    document.getElementById('80').value =0;
+    document.getElementById('81').value =3;
+    document.getElementById('82').value =3;
+    document.getElementById('83').value =0;
+    document.getElementById('84').value =0;
+    document.getElementById('85').value =0;
+    document.getElementById('86').value =0;
+    document.getElementById('87').value =3;
+    document.getElementById('88').value =3;
+    document.getElementById('89').value =4.5;
+    document.getElementById('90').value =4.5;
+    document.getElementById('91').value =0;
+    document.getElementById('92').value =0;
+    document.getElementById('93').value =0;
+    document.getElementById('94').value =0;
+    document.getElementById('95').value =0;
+    document.getElementById('96').value =0;
+    document.getElementById('97').value =0;
+    document.getElementById('98').value =0;
+    document.getElementById('99').value =0;
+    document.getElementById('100').value =0;
+    document.getElementById('101').value =0;
+    document.getElementById('102').value =0;
+    document.getElementById('103').value =0;
+    document.getElementById('104').value =0;
+
+
+
+    }
+    </script>
+
+
+
+	    <script type="text/javascript">
+function hide_show_table(col_name)
+{
+ var checkbox_val=document.getElementById(col_name).checked;
+ if(checkbox_val==true)
+ {
+  var all_col=document.getElementsByClassName(col_name);
+  for(var i=0;i<all_col.length;i++)
+  {
+   all_col[i].style.display="none";
+  }
+  document.getElementById(col_name+"_head").style.display="none";
+  document.getElementById(col_name).value="show";
+ }
+
+ else
+ {
+  var all_col=document.getElementsByClassName(col_name);
+  for(var i=0;i<all_col.length;i++)
+  {
+   all_col[i].style.display="table-cell";
+  }
+  document.getElementById(col_name+"_head").style.display="table-cell";
+  document.getElementById(col_name).value="hide";
+ }
+
+}
+		function refresh(){
+				var val_check2=document.getElementById("process2_col").checked;
+				if(val_check2==true)
+					{document.getElementById("process2_col").checked = false;
+					 hide_show_table("process2_col");}
+				var val_check3=document.getElementById("process3_col").checked;
+				if(val_check3==true)
+					{document.getElementById("process3_col").checked = false;
+					 hide_show_table("process3_col");}
+				var val_check4=document.getElementById("process4_col").checked;
+				if(val_check4==true)
+					{document.getElementById("process4_col").checked = false;
+					 hide_show_table("process4_col");}
+				var val_check5=document.getElementById("process5_col").checked;
+				if(val_check5==true)
+					{document.getElementById("process5_col").checked = false;
+					 hide_show_table("process5_col");}
+				var val_check6=document.getElementById("process6_col").checked;
+				if(val_check6==true)
+					{document.getElementById("process6_col").checked = false;
+					 hide_show_table("process6_col");}
+				var val_check7=document.getElementById("process7_col").checked;
+				if(val_check7==true)
+					{document.getElementById("process7_col").checked = false;
+					 hide_show_table("process7_col");}
+
+
+	}
+	</script>
+<script type="text/javascript">
+	function myFunction() {
+						refresh();
+	}
+	function myFunction1() {
+		refresh();
+		process3_col.click();
+		process5_col.click();
+
+	}
+	function myFunction2() {
+	  refresh();
+	  process4_col.click();
+	  process6_col.click();
+
+	}
+</script>
+
 </head>
 <body>
 
@@ -26,12 +212,12 @@
 		{% csrf_token %}
 		<center>
 			<br>
-
+		<a href="#" onClick="autoFill(); return true;" >Click to Autofill</a>
 		<label for="Oil">Choose Oil Type:</label>
 		  <select name="Oil" id="Oil">
-			<option value="Oil_1" onclick="myFunction()">Oil_1</option>
-			<option value="Oil_2" onclick="myFunction1()">Oil_2</option>
-			<option value="Oil_3" onclick="myFunction2()">Oil_3</option>
+			<option value="Oil_1" onclick="myFunction();">Oil_1</option>
+			<option value="Oil_2" onclick="myFunction1();">Oil_2</option>
+			<option value="Oil_3" onclick="myFunction2();">Oil_3</option>
 
 		  </select>
 		<br>
@@ -43,25 +229,25 @@
 		</tr>
   		<tr>
     		<td>C O</td>
-    		<td><input required type="text" size="8" name="CO" value={{de.CO}}>$</td>
+    		<td><input required type="text" size="8" name="CO" id="1" value={{de.CO}}>$</td>
     		<td>P R D</td>
-    		<td><input required type="text" size="8" name="PRD" value={{de.PRD}}>%</td>
+    		<td><input required type="text" size="8" name="PRD" id="2" value={{de.PRD}}>%</td>
     	</tr>
 		<tr>
 		    <td>C T F</td>
-		    <td><input required type="text" size="8" name="CTF" value={{de.CTF}}>ppm</td>
+		    <td><input required type="text" size="8" name="CTF" id="7" value={{de.CTF}}>ppm</td>
 		    <td>W F A</td>
-		    <td><input required type="text" size="8" name="WFA" value={{de.WFA}}>ppm</td>
+		    <td><input required type="text" size="8" name="WFA" id="8" value={{de.WFA}}>ppm</td>
 		</tr>
    		<tr>
     		<td>G S B C</td>
-    		<td><input required type="text" size="8" name="GSBC" value={{de.GSBC}}>ppm</td>
+    		<td><input required type="text" size="8" name="GSBC" id="11" value={{de.GSBC}}>ppm</td>
     		<td>R O</td>
-   			<td><input required type="text" size="8" name="RO" value={{de.RO}}>ppm</td>
+   			<td><input required type="text" size="8" name="RO" id="12" value={{de.RO}}>ppm</td>
     	</tr>
    		<tr>
     		<td>A O</td>
-    		<td><input required type="text" size="8" name="AO" value={{de.AO}}>ppm</td>
+    		<td><input required type="text" size="8" name="AO" id="15" value={{de.AO}}>ppm</td>
   		</tr>
 		</table>
 	
@@ -75,9 +261,9 @@
 		</tr>
   		<tr>
    			<td>FlowRate</td>
-    		<td><input required type="text" size="8" name="Flowrate" value={{de.Flowrate}}>V/Yr</td>
+    		<td><input required type="text" size="8" name="Flowrate" id="3" value={{de.Flowrate}}>V/Yr</td>
    			<td>Hours</td>
-    		<td><input required type="text" size="8" name="Hours" value={{de.Hours}}>Hr/Yr</td>
+    		<td><input required type="text" size="8" name="Hours" id="4" value={{de.Hours}}>Hr/Yr</td>
     	</tr>
 		</table>
 	
@@ -95,18 +281,18 @@
     	</tr>
   		<tr>
     		<td>CTS Losses</td>
-    		<td><input required type="text" size="8" name="CTS_Losses" value={{de.CTS_Losses}}>%</td>
-    		<td><input required type="text" size="8" name="TheCTS_Losses" value={{de.TheCTS_Losses}}>%</td>
+    		<td><input required type="text" size="8" name="CTS_Losses" id="5" value={{de.CTS_Losses}}>%</td>
+    		<td><input required type="text" size="8" name="TheCTS_Losses" id="6" value={{de.TheCTS_Losses}}>%</td>
     	</tr>
 		<tr>
     		<td>WW</td>
-    		<td><input required type="text" size="8" name="WW" value={{de.WW}}>%</td>
-    		<td><input required type="text" size="8" name="TheWW" value={{de.TheWW}}>%</td>
+    		<td><input required type="text" size="8" name="WW" id="9" value={{de.WW}}>%</td>
+    		<td><input required type="text" size="8" name="TheWW" id="10" value={{de.TheWW}}>%</td>
    		</tr>
    		<tr>
     		<td>UnExp Loss</td>
-    		<td><input required type="text" size="8" name="UEXLOS" value={{de.UEXLOS}}>%</td>
-    		<td><input required type="text" size="8" name="TheUEXLOS" value={{de.TheUEXLOS}}>%</td>
+    		<td><input required type="text" size="8" name="UEXLOS" id="13" value={{de.UEXLOS}}>%</td>
+    		<td><input required type="text" size="8" name="TheUEXLOS" id="14" value={{de.TheUEXLOS}}>%</td>
    		</tr>
    		</table>
    	
@@ -114,7 +300,7 @@
    	<br><br><br><br><br><br><br><br><br><br>
 
 
-	<div id="checkbox_div" hidden>
+	<div id="checkbox_div" >
 	 <p>Show Hide Column</p>
 	 <li><input type="checkbox" value="hide" id="process2_col" onclick="hide_show_table(this.id);">Process2</li>
 	 <li><input type="checkbox" value="hide" id="process3_col" onclick="hide_show_table(this.id);">Process3</li>
@@ -140,7 +326,7 @@
   		</tr>
     	<tr>
 		    <td>FlowPercent</td>
-		    <td colspan="2"><input required type="text" size="7" name="P1_FlowPercent" value={{de.P1_FlowPercent}}>%</td>
+		    <td colspan="2"><input required type="text" size="7" id="16" name="P1_FlowPercent" value={{de.P1_FlowPercent}}>%</td>
 		    <td colspan="2" class="process2_col"></td>
 		    <td colspan="2" class="process3_col"></td>
 		    <td colspan="2" class="process4_col"></td>
@@ -150,63 +336,63 @@
   		</tr>
   		<tr>
 		    <td>Var1</td>
-		    <td colspan="2"><input type="text" size="7" name="P1_Var1" value={{de.P1_Var1}}>%</td>
-		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Var1" value={{de.P2_Var1}}>%</td>
-		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Var1" value={{de.P3_Var1}}>%</td>
-		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Var1" value={{de.P4_Var1}}>%</td>
-		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Var1" value={{de.P5_Var1}}>%</td>
-		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Var1" value={{de.P6_Var1}}>%</td>
-		    <td class="process7_col"><input type="text" size="7" name="P7_Var1" value={{de.P7_Var1}}>%</td>
+		    <td colspan="2"><input type="text" size="7" name="P1_Var1" id="17" value={{de.P1_Var1}}>%</td>
+		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Var1" id="18" value={{de.P2_Var1}}>%</td>
+		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Var1" id="19" value={{de.P3_Var1}}>%</td>
+		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Var1" id="20" value={{de.P4_Var1}}>%</td>
+		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Var1" id="21" value={{de.P5_Var1}}>%</td>
+		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Var1" id="22" value={{de.P6_Var1}}>%</td>
+		    <td class="process7_col"><input type="text" size="7" name="P7_Var1" id="23" value={{de.P7_Var1}}>%</td>
   		</tr>
 
   		<tr>
 		    <td>Var2</td>
-		    <td colspan="2"><input type="text" size="7" name="P1_Var2" value={{de.P1_Var2}}>ppm</td>
-		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Var2" value={{de.P2_Var2}}>ppm</td>
-		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Var2" value={{de.P3_Var2}}>ppm</td>
-		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Var2" value={{de.P4_Var2}}>ppm</td>
-		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Var2" value={{de.P5_Var2}}>ppm</td>
-		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Var2" value={{de.P6_Var2}}>ppm</td>
-		    <td class="process7_col"><input type="text" size="7" name="P7_Var2" value={{de.P7_Var2}}>ppm</td>
+		    <td colspan="2"><input type="text" size="7" name="P1_Var2" id="24" value={{de.P1_Var2}}>ppm</td>
+		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Var2" id="25" value={{de.P2_Var2}}>ppm</td>
+		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Var2" id="26" value={{de.P3_Var2}}>ppm</td>
+		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Var2" id="27" value={{de.P4_Var2}}>ppm</td>
+		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Var2" id="28" value={{de.P5_Var2}}>ppm</td>
+		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Var2" id="29" value={{de.P6_Var2}}>ppm</td>
+		    <td class="process7_col"><input type="text" size="7" name="P7_Var2" id="30" value={{de.P7_Var2}}>ppm</td>
   		</tr>
     	<tr>
 		    <td>Var3</td>
-		    <td colspan="2"><input type="text" size="7" name="P1_Var3" value={{de.P1_Var3}}>%</td>
-		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Var3" value={{de.P2_Var3}}>%</td>
-		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Var3" value={{de.P3_Var3}}>%</td>
-		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Var3" value={{de.P4_Var3}}>%</td>
-		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Var3" value={{de.P5_Var3}}>%</td>
-		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Var3" value={{de.P6_Var3}}>%</td>
-		    <td class="process7_col"><input type="text" size="7" name="P7_Var3" value={{de.P7_Var3}}>%</td>
+		    <td colspan="2"><input type="text" size="7" name="P1_Var3" id="31" value={{de.P1_Var3}}>%</td>
+		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Var3" id="32" value={{de.P2_Var3}}>%</td>
+		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Var3" id="33" value={{de.P3_Var3}}>%</td>
+		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Var3" id="34" value={{de.P4_Var3}}>%</td>
+		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Var3" id="35" value={{de.P5_Var3}}>%</td>
+		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Var3" id="36" value={{de.P6_Var3}}>%</td>
+		    <td class="process7_col"><input type="text" size="7" name="P7_Var3" id="37" value={{de.P7_Var3}}>%</td>
   		</tr>
     	<tr>
 		    <td>Impurities</td>
-		    <td colspan="2"><input type="text" size="7" name="P1_Impurities" value={{de.P1_Impurities}}>%</td>
-		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Impurities" value={{de.P2_Impurities}}>%</td>
-		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Impurities" value={{de.P3_Impurities}}>%</td>
-		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Impurities" value={{de.P4_Impurities}}>%</td>
-		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Impurities" value={{de.P5_Impurities}}>%</td>
-		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Impurities" value={{de.P6_Impurities}}>%</td>
-		    <td class="process7_col"><input type="text" size="7" name="P7_Impurities" value={{de.P1_Impurities}}>%</td>
+		    <td colspan="2"><input type="text" size="7" name="P1_Impurities" id="38" value={{de.P1_Impurities}}>%</td>
+		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Impurities" id="39" value={{de.P2_Impurities}}>%</td>
+		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Impurities" id="40" value={{de.P3_Impurities}}>%</td>
+		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Impurities" id="41" value={{de.P4_Impurities}}>%</td>
+		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Impurities" id="42" value={{de.P5_Impurities}}>%</td>
+		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Impurities" id="43" value={{de.P6_Impurities}}>%</td>
+		    <td class="process7_col"><input type="text" size="7" name="P7_Impurities" id="44" value={{de.P1_Impurities}}>%</td>
   		</tr>
     	<tr>
 		    <td>Mass</td>
-		    <td colspan="2"><input type="text" size="7" name="P1_Mass" value={{de.P1_Mass}}>%</td>
-		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Mass" value={{de.P2_Mass}}>%</td>
-		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Mass" value={{de.P3_Mass}}>%</td>
-		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Mass" value={{de.P4_Mass}}>%</td>
-		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Mass" value={{de.P5_Mass}}>%</td>
-		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Mass" value={{de.P6_Mass}}>%</td>
+		    <td colspan="2"><input type="text" size="7" name="P1_Mass" id="45" value={{de.P1_Mass}}>%</td>
+		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Mass" id="46" value={{de.P2_Mass}}>%</td>
+		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Mass" id="47" value={{de.P3_Mass}}>%</td>
+		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Mass" id="48" value={{de.P4_Mass}}>%</td>
+		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Mass" id="49" value={{de.P5_Mass}}>%</td>
+		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Mass" id="50" value={{de.P6_Mass}}>%</td>
 		    <td class="process7_col"></td>
   		</tr>
     	<tr>
 		    <td>Wax1</td>
-		    <td colspan="2"><input type="text" size="7" name="P1_Wax1" value={{de.P1_Wax1}}>ppm</td>
-		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Wax1" value={{de.P2_Wax1}}>ppm</td>
-		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Wax1" value={{de.P3_Wax1}}>ppm</td>
-		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Wax1" value={{de.P4_Wax1}}>ppm</td>
-		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Wax1" value={{de.P5_Wax1}}>ppm</td>
-		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Wax1" value={{de.P6_Wax1}}>ppm</td>
+		    <td colspan="2"><input type="text" size="7" name="P1_Wax1" id="51" value={{de.P1_Wax1}}>ppm</td>
+		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Wax1" id="52" value={{de.P2_Wax1}}>ppm</td>
+		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Wax1" id="53" value={{de.P3_Wax1}}>ppm</td>
+		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Wax1" id="54" value={{de.P4_Wax1}}>ppm</td>
+		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Wax1" id="55" value={{de.P5_Wax1}}>ppm</td>
+		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Wax1" id="56" value={{de.P6_Wax1}}>ppm</td>
 		    <td class="process7_col"></td>
   		</tr>
   		<tr></tr>
@@ -244,69 +430,69 @@
 		</tr>
    		<tr>
 		    <td>Assum1</td>
-		    <td><input type="text" size="5" name="P1_Ass1" value={{de.P1_Ass1}}>ppm</td>
-		    <td><input type="text" size="5" name="P1_TheAss1" value={{de.P1_TheAss1}}>ppm</td>
-		    <td class="process2_col"><input type="text" size="5" name="P2_Ass1" value={{de.P2_Ass1}}>ppm</td>
-		    <td class="process2_col"><input type="text" size="5" name="P2_TheAss1" value={{de.P2_TheAss1}}>ppm</td>
-		    <td class="process3_col"><input type="text" size="5" name="P3_Ass1" value={{de.P3_Ass1}}>ppm</td>
-		    <td class="process3_col"><input type="text" size="5" name="P3_TheAss1" value={{de.P3_TheAss1}}>ppm</td>
-		    <td class="process4_col"><input type="text" size="5" name="P4_Ass1" value={{de.P4_Ass1}}>ppm</td>
-        	<td class="process4_col"><input type="text" size="5" name="P4_TheAss1" value={{de.P4_TheAss1}}>ppm</td>
-		    <td class="process5_col"><input type="text" size="5" name="P5_Ass1" value={{de.P5_Ass1}}>ppm</td>
-		    <td class="process5_col"><input type="text" size="5" name="P5_TheAss1" value={{de.P5_TheAss1}}>ppm</td>
-		    <td class="process6_col"><input type="text" size="5" name="P6_Ass1" value={{de.P6_Ass1}}>ppm</td>
-		    <td class="process6_col"><input type="text" size="5" name="P6_TheAss1" value={{de.P6_TheAss1}}>ppm</td>
+		    <td><input type="text" size="5" id="57" name="P1_Ass1" value={{de.P1_Ass1}}>ppm</td>
+		    <td><input type="text" size="5" id="58" name="P1_TheAss1" value={{de.P1_TheAss1}}>ppm</td>
+		    <td class="process2_col"><input type="text" size="5" id="59" name="P2_Ass1" value={{de.P2_Ass1}}>ppm</td>
+		    <td class="process2_col"><input type="text" size="5" id="60" name="P2_TheAss1" value={{de.P2_TheAss1}}>ppm</td>
+		    <td class="process3_col"><input type="text" size="5" id="61" name="P3_Ass1" value={{de.P3_Ass1}}>ppm</td>
+		    <td class="process3_col"><input type="text" size="5" id="62" name="P3_TheAss1" value={{de.P3_TheAss1}}>ppm</td>
+		    <td class="process4_col"><input type="text" size="5" id="63" name="P4_Ass1" value={{de.P4_Ass1}}>ppm</td>
+        	<td class="process4_col"><input type="text" size="5" id="64" name="P4_TheAss1" value={{de.P4_TheAss1}}>ppm</td>
+		    <td class="process5_col"><input type="text" size="5" id="65" name="P5_Ass1" value={{de.P5_Ass1}}>ppm</td>
+		    <td class="process5_col"><input type="text" size="5" id="66" name="P5_TheAss1" value={{de.P5_TheAss1}}>ppm</td>
+		    <td class="process6_col"><input type="text" size="5" id="67" name="P6_Ass1" value={{de.P6_Ass1}}>ppm</td>
+		    <td class="process6_col"><input type="text" size="5" id="68" name="P6_TheAss1" value={{de.P6_TheAss1}}>ppm</td>
 		    <td class="process7_col"></td>
 		    
   		</tr>
    		<tr>
 		    <td>Assum2</td>
-		    <td><input type="text" size="5" name="P1_Ass2" value={{de.P1_Ass2}}>ppm</td>
-		    <td><input type="text" size="5" name="P1_TheAss2" value={{de.P1_TheAss2}}>ppm</td>
-		    <td class="process2_col"><input type="text" size="5" name="P2_Ass2" value={{de.P2_Ass2}}>ppm</td>
-		    <td class="process2_col"><input type="text" size="5" name="P2_TheAss2" value={{de.P2_TheAss2}}>ppm</td>
-		    <td class="process3_col"><input type="text" size="5" name="P3_Ass2" value={{de.P3_Ass2}}>ppm</td>
-		    <td class="process3_col"><input type="text" size="5" name="P3_TheAss2" value={{de.P3_TheAss2}}>ppm</td>
-		    <td class="process4_col"><input type="text" size="5" name="P4_Ass2" value={{de.P4_Ass2}}>ppm</td>
-        	<td class="process4_col"><input type="text" size="5" name="P4_TheAss2" value={{de.P4_TheAss2}}>ppm</td>
-		    <td class="process5_col"><input type="text" size="5" name="P5_Ass2" value={{de.P5_Ass2}}>ppm</td>
-		    <td class="process5_col"><input type="text" size="5" name="P5_TheAss2" value={{de.P5_TheAss2}}>ppm</td>
-		    <td class="process6_col"><input type="text" size="5" name="P6_Ass2" value={{de.P6_Ass2}}>ppm</td>
-		    <td class="process6_col"><input type="text" size="5" name="P6_TheAss2" value={{de.P6_TheAss2}}>ppm</td>
+		    <td><input type="text" size="5" id="69" name="P1_Ass2" value={{de.P1_Ass2}}>ppm</td>
+		    <td><input type="text" size="5" id="70" name="P1_TheAss2" value={{de.P1_TheAss2}}>ppm</td>
+		    <td class="process2_col"><input type="text" size="5" id="71" name="P2_Ass2" value={{de.P2_Ass2}}>ppm</td>
+		    <td class="process2_col"><input type="text" size="5" id="72" name="P2_TheAss2" value={{de.P2_TheAss2}}>ppm</td>
+		    <td class="process3_col"><input type="text" size="5" id="73" name="P3_Ass2" value={{de.P3_Ass2}}>ppm</td>
+		    <td class="process3_col"><input type="text" size="5" id="74" name="P3_TheAss2" value={{de.P3_TheAss2}}>ppm</td>
+		    <td class="process4_col"><input type="text" size="5" id="75" name="P4_Ass2" value={{de.P4_Ass2}}>ppm</td>
+        	<td class="process4_col"><input type="text" size="5" id="76" name="P4_TheAss2" value={{de.P4_TheAss2}}>ppm</td>
+		    <td class="process5_col"><input type="text" size="5" id="77" name="P5_Ass2" value={{de.P5_Ass2}}>ppm</td>
+		    <td class="process5_col"><input type="text" size="5" id="78" name="P5_TheAss2" value={{de.P5_TheAss2}}>ppm</td>
+		    <td class="process6_col"><input type="text" size="5" id="79" name="P6_Ass2" value={{de.P6_Ass2}}>ppm</td>
+		    <td class="process6_col"><input type="text" size="5" id="80" name="P6_TheAss2" value={{de.P6_TheAss2}}>ppm</td>
 		    <td class="process7_col"></td>
 		    
   		</tr>
    		<tr>
 		    <td>Assum3</td>
-		    <td><input type="text" size="5" name="P1_Ass3" value={{de.P1_Ass3}}>ppm</td>
-		    <td><input type="text" size="5" name="P1_TheAss3" value={{de.P1_TheAss3}}>ppm</td>
-		    <td class="process2_col"><input type="text" size="5" name="P2_Ass3" value={{de.P2_Ass3}}>ppm</td>
-		    <td class="process2_col"><input type="text" size="5" name="P2_TheAss3" value={{de.P2_TheAss3}}>ppm</td>
-		    <td class="process3_col"><input type="text" size="5" name="P3_Ass3" value={{de.P3_Ass3}}>ppm</td>
-		    <td class="process3_col"><input type="text" size="5" name="P3_TheAss3" value={{de.P3_TheAss3}}>ppm</td>
-		    <td class="process4_col"><input type="text" size="5" name="P4_Ass3" value={{de.P4_Ass3}}>ppm</td>
-		    <td class="process4_col"><input type="text" size="5" name="P4_TheAss3" value={{de.P4_TheAss3}}>ppm</td>
-		    <td class="process5_col"><input type="text" size="5" name="P5_Ass3" value={{de.P5_Ass3}}>ppm</td>
-		    <td class="process5_col"><input type="text" size="5" name="P5_TheAss3" value={{de.P5_TheAss3}}>ppm</td>
-		    <td class="process6_col"><input type="text" size="5" name="P6_Ass3" value={{de.P6_Ass3}}>ppm</td>
-		    <td class="process6_col"><input type="text" size="5" name="P6_TheAss3" value={{de.P6_TheAss3}}>ppm</td>
+		    <td><input type="text" size="5" id="81" name="P1_Ass3" value={{de.P1_Ass3}}>ppm</td>
+		    <td><input type="text" size="5" id="82" name="P1_TheAss3" value={{de.P1_TheAss3}}>ppm</td>
+		    <td class="process2_col"><input type="text" size="5" id="83" name="P2_Ass3" value={{de.P2_Ass3}}>ppm</td>
+		    <td class="process2_col"><input type="text" size="5" id="84" name="P2_TheAss3" value={{de.P2_TheAss3}}>ppm</td>
+		    <td class="process3_col"><input type="text" size="5" id="85" name="P3_Ass3" value={{de.P3_Ass3}}>ppm</td>
+		    <td class="process3_col"><input type="text" size="5" id="86" name="P3_TheAss3" value={{de.P3_TheAss3}}>ppm</td>
+		    <td class="process4_col"><input type="text" size="5" id="87" name="P4_Ass3" value={{de.P4_Ass3}}>ppm</td>
+		    <td class="process4_col"><input type="text" size="5" id="88" name="P4_TheAss3" value={{de.P4_TheAss3}}>ppm</td>
+		    <td class="process5_col"><input type="text" size="5" id="89" name="P5_Ass3" value={{de.P5_Ass3}}>ppm</td>
+		    <td class="process5_col"><input type="text" size="5" id="90" name="P5_TheAss3" value={{de.P5_TheAss3}}>ppm</td>
+		    <td class="process6_col"><input type="text" size="5" id="91" name="P6_Ass3" value={{de.P6_Ass3}}>ppm</td>
+		    <td class="process6_col"><input type="text" size="5" id="92" name="P6_TheAss3" value={{de.P6_TheAss3}}>ppm</td>
 		    <td class="process7_col"></td>
 		    
 		</tr>
 		<tr>
 		    <td>Assum4</td>
-		    <td><input type="text" size="5" name="P1_Ass4" value={{de.P1_Ass4}}>ppm</td>
-		    <td><input type="text" size="5" name="P1_TheAss4" value={{de.P1_TheAss4}}>ppm</td>
-		    <td class="process2_col"><input type="text" size="5" name="P2_Ass4" value={{de.P2_Ass4}}>ppm</td>
-		    <td class="process2_col"><input type="text" size="5" name="P2_TheAss4" value={{de.P2_TheAss4}}>ppm</td>
-		    <td class="process3_col"><input type="text" size="5" name="P3_Ass4" value={{de.P3_Ass4}}>ppm</td>
-		    <td class="process3_col"><input type="text" size="5" name="P3_TheAss4" value={{de.P3_TheAss4}}>ppm</td>
-		    <td class="process4_col"><input type="text" size="5" name="P4_Ass4" value={{de.P4_Ass4}}>ppm</td>
-		    <td class="process4_col"><input type="text" size="5" name="P4_TheAss4" value={{de.P4_TheAss4}}>ppm</td>
-		    <td class="process5_col"><input type="text" size="5" name="P5_Ass4" value={{de.P5_Ass4}}>ppm</td>
-		    <td class="process5_col"><input type="text" size="5" name="P5_TheAss4" value={{de.P5_TheAss4}}>ppm</td>
-		    <td class="process6_col"><input type="text" size="5" name="P6_Ass4" value={{de.P6_Ass4}}>ppm</td>
-		    <td class="process6_col"><input type="text" size="5" name="P6_TheAss4" value={{de.P6_TheAss4}}>ppm</td>
+		    <td><input type="text" size="5" id="93" name="P1_Ass4" value={{de.P1_Ass4}}>ppm</td>
+		    <td><input type="text" size="5" id="94" name="P1_TheAss4" value={{de.P1_TheAss4}}>ppm</td>
+		    <td class="process2_col"><input type="text" size="5" id="95" name="P2_Ass4" value={{de.P2_Ass4}}>ppm</td>
+		    <td class="process2_col"><input type="text" size="5" id="96" name="P2_TheAss4" value={{de.P2_TheAss4}}>ppm</td>
+		    <td class="process3_col"><input type="text" size="5" id="97" name="P3_Ass4" value={{de.P3_Ass4}}>ppm</td>
+		    <td class="process3_col"><input type="text" size="5" id="98" name="P3_TheAss4" value={{de.P3_TheAss4}}>ppm</td>
+		    <td class="process4_col"><input type="text" size="5" id="99" name="P4_Ass4" value={{de.P4_Ass4}}>ppm</td>
+		    <td class="process4_col"><input type="text" size="5" id="100" name="P4_TheAss4" value={{de.P4_TheAss4}}>ppm</td>
+		    <td class="process5_col"><input type="text" size="5" id="101" name="P5_Ass4" value={{de.P5_Ass4}}>ppm</td>
+		    <td class="process5_col"><input type="text" size="5" id="102" name="P5_TheAss4" value={{de.P5_TheAss4}}>ppm</td>
+		    <td class="process6_col"><input type="text" size="5" id="103" name="P6_Ass4" value={{de.P6_Ass4}}>ppm</td>
+		    <td class="process6_col"><input type="text" size="5" id="104" name="P6_TheAss4" value={{de.P6_TheAss4}}>ppm</td>
 		    <td class="process7_col"></td>
 		    
 		</tr>
@@ -316,6 +502,8 @@
 	 
 	<br>
 	<br>
+
+
 	<div class="container">
   		<center><input type=submit value="Calculate" class="btn" ></center>
 	</div>	<br><br><br><br>
@@ -910,8 +1098,6 @@
 </div>
 </form>
 <h5 align=center>Developed by XYZ Company</h5>
-
-
 
 <script>
 function openCity(evt, cityName) {
