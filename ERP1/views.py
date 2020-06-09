@@ -933,7 +933,7 @@ def calculate(request):
     de.UEXLOS=round(UEXLOS,2)
     de.TheUEXLOS=round(TheUEXLOS,2)
     de.P1_FlowPercent=round(P1_FlowPercent,2)
-    de.P2_Var1=round(P2_Var1,2)
+    de.P1_Var1=round(P1_Var1,2)
     de.P2_Var1=round(P2_Var1,2)
     de.P3_Var1=round(P3_Var1,2)
     de.P4_Var1=round(P4_Var1,2)
