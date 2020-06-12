@@ -4,221 +4,57 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="{% static 'css/css1.css' %}">
+<script type="text/javascript" src="{% static 'js/js1.js' %}"></script>
+	<style>
+#myDIV {
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 10px;
+}</style>
 
-<script type="text/javascript">
-  function autoFill() {
-    document.getElementById('1').value = 1028;
-    document.getElementById('2').value = 350;
-    document.getElementById('3').value = 69789;
-    document.getElementById('4').value = 6000;
-    document.getElementById('5').value = 1;
-    document.getElementById('6').value = 0;
-    document.getElementById('7').value = 0;
-    document.getElementById('8').value = 0;
-    document.getElementById('9').value = 0;
-    document.getElementById('10').value =0;
-    document.getElementById('11').value =20;
-    document.getElementById('12').value =1179;
-    document.getElementById('13').value =0;
-    document.getElementById('14').value =0;
-    document.getElementById('15').value =350;
-    document.getElementById('16').value =100;
-    document.getElementById('17').value =1.15;
-    document.getElementById('18').value =1.15;
-    document.getElementById('19').value =1.15;
-    document.getElementById('20').value =1.15;
-    document.getElementById('21').value =0.07;
-    document.getElementById('22').value =0.07;
-    document.getElementById('23').value =0.05;
-    document.getElementById('24').value =225;
-    document.getElementById('25').value =20;
-    document.getElementById('26').value =20;
-    document.getElementById('27').value =20;
-    document.getElementById('28').value =0;
-    document.getElementById('29').value =0;
-    document.getElementById('30').value =0;
-    document.getElementById('31').value =0.3;
-    document.getElementById('32').value =0.3;
-    document.getElementById('33').value =0.3;
-    document.getElementById('34').value =0.3;
-    document.getElementById('35').value =0;
-    document.getElementById('36').value =0;
-    document.getElementById('37').value =0;
-    document.getElementById('38').value =0.2;
-    document.getElementById('39').value =0.2;
-    document.getElementById('40').value =0.2;
-    document.getElementById('41').value =0.2;
-    document.getElementById('42').value =0;
-    document.getElementById('43').value =0;
-    document.getElementById('44').value =0;
-    document.getElementById('45').value =0;
-    document.getElementById('46').value =0;
-    document.getElementById('47').value =0;
-    document.getElementById('48').value =0;
-    document.getElementById('49').value =0;
-    document.getElementById('50').value =0;
-    document.getElementById('51').value =2000;
-    document.getElementById('52').value =500;
-    document.getElementById('53').value =500;
-    document.getElementById('54').value =500;
-    document.getElementById('55').value =500;
-    document.getElementById('56').value =500;
-    document.getElementById('57').value =38;
-    document.getElementById('58').value =40;
-    document.getElementById('59').value =0;
-    document.getElementById('60').value =0;
-    document.getElementById('61').value =0;
-    document.getElementById('62').value =0;
-    document.getElementById('63').value =30;
-    document.getElementById('64').value =25;
-    document.getElementById('65').value =77;
-    document.getElementById('66').value =60;
-    document.getElementById('67').value =100;
-    document.getElementById('68').value =30;
-    document.getElementById('69').value =5;
-    document.getElementById('70').value =5;
-    document.getElementById('71').value =12;
-    document.getElementById('72').value =12;
-    document.getElementById('73').value =0;
-    document.getElementById('74').value =0;
-    document.getElementById('75').value =10;
-    document.getElementById('76').value =10;
-    document.getElementById('77').value =10;
-    document.getElementById('78').value =10;
-    document.getElementById('79').value =0;
-    document.getElementById('80').value =0;
-    document.getElementById('81').value =3;
-    document.getElementById('82').value =3;
-    document.getElementById('83').value =0;
-    document.getElementById('84').value =0;
-    document.getElementById('85').value =0;
-    document.getElementById('86').value =0;
-    document.getElementById('87').value =3;
-    document.getElementById('88').value =3;
-    document.getElementById('89').value =4.5;
-    document.getElementById('90').value =4.5;
-    document.getElementById('91').value =0;
-    document.getElementById('92').value =0;
-    document.getElementById('93').value =0;
-    document.getElementById('94').value =0;
-    document.getElementById('95').value =0;
-    document.getElementById('96').value =0;
-    document.getElementById('97').value =0;
-    document.getElementById('98').value =0;
-    document.getElementById('99').value =0;
-    document.getElementById('100').value =0;
-    document.getElementById('101').value =0;
-    document.getElementById('102').value =0;
-    document.getElementById('103').value =0;
-    document.getElementById('104').value =0;
-
-
-
-    }
-    </script>
-
-
-
-	    <script type="text/javascript">
-function hide_show_table(col_name)
-{
- var checkbox_val=document.getElementById(col_name).checked;
- if(checkbox_val==true)
- {
-  var all_col=document.getElementsByClassName(col_name);
-  for(var i=0;i<all_col.length;i++)
-  {
-   all_col[i].style.display="none";
-  }
-  document.getElementById(col_name+"_head").style.display="none";
-  document.getElementById(col_name).value="show";
- }
-
- else
- {
-  var all_col=document.getElementsByClassName(col_name);
-  for(var i=0;i<all_col.length;i++)
-  {
-   all_col[i].style.display="table-cell";
-  }
-  document.getElementById(col_name+"_head").style.display="table-cell";
-  document.getElementById(col_name).value="hide";
- }
-
-}
-		function refresh(){
-				var val_check2=document.getElementById("process2_col").checked;
-				if(val_check2==true)
-					{document.getElementById("process2_col").checked = false;
-					 hide_show_table("process2_col");}
-				var val_check3=document.getElementById("process3_col").checked;
-				if(val_check3==true)
-					{document.getElementById("process3_col").checked = false;
-					 hide_show_table("process3_col");}
-				var val_check4=document.getElementById("process4_col").checked;
-				if(val_check4==true)
-					{document.getElementById("process4_col").checked = false;
-					 hide_show_table("process4_col");}
-				var val_check5=document.getElementById("process5_col").checked;
-				if(val_check5==true)
-					{document.getElementById("process5_col").checked = false;
-					 hide_show_table("process5_col");}
-				var val_check6=document.getElementById("process6_col").checked;
-				if(val_check6==true)
-					{document.getElementById("process6_col").checked = false;
-					 hide_show_table("process6_col");}
-				var val_check7=document.getElementById("process7_col").checked;
-				if(val_check7==true)
-					{document.getElementById("process7_col").checked = false;
-					 hide_show_table("process7_col");}
-
-
-	}
-	</script>
-<script type="text/javascript">
-	function myFunction() {
-						refresh();
-	}
-	function myFunction1() {
-		refresh();
-		process3_col.click();
-		process5_col.click();
-
-	}
-	function myFunction2() {
-	  refresh();
-	  process4_col.click();
-	  process6_col.click();
-
-	}
-</script>
 
 </head>
 <body>
 
-<h1 align=center>Company Name</h1>
+<h1 align=center>Hamgrid UK Limited</h1>
 	<div class="tab">
-  		<button class="tablinks" onclick="openCity(event, 'Input')" id="defaultOpen">Input</button>
-  		<button class="tablinks" onclick="openCity(event, 'ActualData')">Actual Data</button>
-  		<button class="tablinks" onclick="openCity(event, 'TheoreticalData')">Theoretical Data</button>
-  		<button class="tablinks" onclick="openCity(event, 'Summary')">Summary</button>
+  		<button class="tablinks" onclick="openCity(event, 'Input')" id="defaultOpen">Process Input</button>
+  		<button class="tablinks" onclick="openCity(event, 'ActualData')">Actual Calculation</button>
+  		<button class="tablinks" onclick="openCity(event, 'TheoreticalData')">Theoretical Calculation</button>
+  		<button class="tablinks" onclick="openCity(event, 'Summary')">Summary Output</button>
 	</div>
 
 
 <div id="Input" class="tabcontent">
 	<h3 align=center>INPUT</h3>
 
-	<form action="calculate" method="post">
+	<form action="calculate" method="post" name="myform">
 		{% csrf_token %}
 		<center>
 			<br>
 		<a href="#" onClick="autoFill(); return true;" >Click to Autofill</a>
 		<label for="Oil">Choose Oil Type:</label>
 		  <select name="Oil" id="Oil">
-			<option value="Oil_1" onclick="myFunction();">Oil_1</option>
-			<option value="Oil_2" onclick="myFunction1();">Oil_2</option>
-			<option value="Oil_3" onclick="myFunction2();">Oil_3</option>
-
+			  <option id="Oil_1" onclick="oilfn(this.id);">--SELECT--</option>
+			<option id="Oil_17" onclick="oilfn(this.id);" >Customize Oil</option>
+			<option id="Oil_1"  onclick="oilfn(this.id);" >Palm Oil</option>
+			<option id="Oil_2"  onclick="oilfn(this.id);" >SunFlower Oil 1</option>
+			<option id="Oil_3"  onclick="oilfn(this.id);" >SunFlower Oil 2</option>
+			<option id="Oil_4"  onclick="oilfn(this.id);" >SunFlower Oil 3</option>
+			<option id="Oil_5"  onclick="oilfn(this.id);" >SunFlower Oil 4</option>
+			<option id="Oil_6"  onclick="oilfn(this.id);" >HOCAN</option>
+			<option id="Oil_7"  onclick="oilfn(this.id);" >CORN</option>
+			<option id="Oil_8"  onclick="oilfn(this.id);" >CNO</option>
+			<option id="Oil_9"  onclick="oilfn(this.id);" >SBO</option>
+			<option id="Oil_10" onclick="oilfn(this.id);" >HYDRO SBO</option>
+			<option id="Oil_11" onclick="oilfn(this.id);" >CIE SBO</option>
+			<option id="Oil_12" onclick="oilfn(this.id);" >ROL</option>
+			<option id="Oil_13" onclick="oilfn(this.id);" >RPS</option>
+			<option id="Oil_14" onclick="oilfn(this.id);" >RPKO</option>
+			<option id="Oil_15" onclick="oilfn(this.id);" >RPKOL</option>
+			<option id="Oil_16" onclick="oilfn(this.id);" >RPKST</option>
 		  </select>
 		<br>
 		<br></center>
@@ -228,26 +64,26 @@ function hide_show_table(col_name)
     		<th colspan="4"><center>PRICES</center></th>
 		</tr>
   		<tr>
-    		<td>C O</td>
+    		<td>Crude Oil</td>
     		<td><input required type="text" size="8" name="CO" id="1" value={{de.CO}}>$</td>
-    		<td>P R D</td>
-    		<td><input required type="text" size="8" name="PRD" id="2" value={{de.PRD}}>%</td>
+    		<td>Physical Relief Distilate</td>
+    		<td><input required type="text" size="8" name="PRD" id="2" value={{de.PRD}}>$</td>
     	</tr>
 		<tr>
-		    <td>C T F</td>
-		    <td><input required type="text" size="8" name="CTF" id="7" value={{de.CTF}}>ppm</td>
-		    <td>W F A</td>
-		    <td><input required type="text" size="8" name="WFA" id="8" value={{de.WFA}}>ppm</td>
+		    <td>Crude Tank Foots</td>
+		    <td><input required type="text" size="8" name="CTF" id="7" value={{de.CTF}}>$</td>
+		    <td>Winterising Filter Aid</td>
+		    <td><input required type="text" size="8" name="WFA" id="8" value={{de.WFA}}>$</td>
 		</tr>
    		<tr>
-    		<td>G S B C</td>
-    		<td><input required type="text" size="8" name="GSBC" id="11" value={{de.GSBC}}>ppm</td>
-    		<td>R O</td>
-   			<td><input required type="text" size="8" name="RO" id="12" value={{de.RO}}>ppm</td>
+    		<td>Gums & Spent B.Caly</td>
+    		<td><input required type="text" size="8" name="GSBC" id="11" value={{de.GSBC}}>$</td>
+    		<td>Refined Oil</td>
+   			<td><input required type="text" size="8" name="RO" id="12" value={{de.RO}}>$</td>
     	</tr>
    		<tr>
-    		<td>A O</td>
-    		<td><input required type="text" size="8" name="AO" id="15" value={{de.AO}}>ppm</td>
+    		<td>Acid Oil</td>
+    		<td><input required type="text" size="8" name="AO" id="15" value={{de.AO}}>$</td>
   		</tr>
 		</table>
 	
@@ -260,9 +96,9 @@ function hide_show_table(col_name)
     		<th colspan="4"><center>Data</center></th>
 		</tr>
   		<tr>
-   			<td>FlowRate</td>
+   			<td>Oil FlowRate</td>
     		<td><input required type="text" size="8" name="Flowrate" id="3" value={{de.Flowrate}}>V/Yr</td>
-   			<td>Hours</td>
+   			<td>Hours Worked</td>
     		<td><input required type="text" size="8" name="Hours" id="4" value={{de.Hours}}>Hr/Yr</td>
     	</tr>
 		</table>
@@ -280,35 +116,35 @@ function hide_show_table(col_name)
     		<td>Theoretical</td>
     	</tr>
   		<tr>
-    		<td>CTS Losses</td>
+    		<td>Crude Tank Storage Losses('Foots')</td>
     		<td><input required type="text" size="8" name="CTS_Losses" id="5" value={{de.CTS_Losses}}>%</td>
     		<td><input required type="text" size="8" name="TheCTS_Losses" id="6" value={{de.TheCTS_Losses}}>%</td>
     	</tr>
 		<tr>
-    		<td>WW</td>
+    		<td>Waste Water</td>
     		<td><input required type="text" size="8" name="WW" id="9" value={{de.WW}}>%</td>
     		<td><input required type="text" size="8" name="TheWW" id="10" value={{de.TheWW}}>%</td>
    		</tr>
    		<tr>
-    		<td>UnExp Loss</td>
+    		<td>Unexplained Losses</td>
     		<td><input required type="text" size="8" name="UEXLOS" id="13" value={{de.UEXLOS}}>%</td>
     		<td><input required type="text" size="8" name="TheUEXLOS" id="14" value={{de.TheUEXLOS}}>%</td>
    		</tr>
    		</table>
    	
 
-   	<br><br><br><br><br><br><br><br><br><br>
+   	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+	<div id="myDIV" style="display: none;" >
+	<p>Select Process to Bypass</p>
+	 <li><input type="checkbox" value="hide" id="process2_col" onclick="hide_show_table(this.id);" >Process2</li>
+	 <li><input type="checkbox" value="hide" id="process3_col" onclick="hide_show_table(this.id);" >Process3</li>
+	 <li><input type="checkbox" value="hide" id="process4_col" onclick="hide_show_table(this.id);" >Process4</li>
+     <li><input type="checkbox" value="hide" id="process5_col" onclick="hide_show_table(this.id);" >Process5</li>
+	 <li><input type="checkbox" value="hide" id="process6_col" onclick="hide_show_table(this.id);" >Process6</li>
 
-	<div id="checkbox_div" >
-	 <p>Show Hide Column</p>
-	 <li><input type="checkbox" value="hide" id="process2_col" onclick="hide_show_table(this.id);">Process2</li>
-	 <li><input type="checkbox" value="hide" id="process3_col" onclick="hide_show_table(this.id);">Process3</li>
-	 <li><input type="checkbox" value="hide" id="process4_col" onclick="hide_show_table(this.id);">Process4</li>
-     <li><input type="checkbox" value="hide" id="process5_col" onclick="hide_show_table(this.id);">Process5</li>
-	 <li><input type="checkbox" value="hide" id="process6_col" onclick="hide_show_table(this.id);">Process6</li>
-	 <li><input type="checkbox" value="hide" id="process7_col" onclick="hide_show_table(this.id);">Process7</li>
 	</div>
+
 	
  		<table style="width:100%" align="center">
   		<tr>
@@ -316,16 +152,16 @@ function hide_show_table(col_name)
   		</tr>
   		<tr>
   			<th></th>
-    		<th colspan="2"><center>Process 1</center></th>
-		    <th colspan="2" id="process2_col_head"><center>Process 2</center></th>
-		    <th colspan="2" id="process3_col_head"><center>Process 3</center></th>
-		    <th colspan="2" id="process4_col_head"><center>Process 4</center></th>
-		    <th colspan="2" id="process5_col_head"><center>Process 5</center></th>
-		    <th colspan="2" id="process6_col_head"><center>Process 6</center></th>
-		    <th  id="process7_col_head"><center>Process 7</center></th>
+    		<th colspan="2"><center>Super Degumming</center></th>
+		    <th colspan="2" id="process2_col_head"><center>Neutralisation</center></th>
+		    <th colspan="2" id="process3_col_head"><center>Water Washing</center></th>
+		    <th colspan="2" id="process4_col_head"><center>Bleaching</center></th>
+		    <th colspan="2" id="process5_col_head"><center>Dry Winterising</center></th>
+		    <th colspan="2" id="process6_col_head"><center>Deodorising</center></th>
+		    <th  id="process7_col_head"><center>Iterations</center></th>
   		</tr>
     	<tr>
-		    <td>FlowPercent</td>
+		    <td>Oil Flow%</td>
 		    <td colspan="2"><input required type="text" size="7" id="16" name="P1_FlowPercent" value={{de.P1_FlowPercent}}>%</td>
 		    <td colspan="2" class="process2_col"></td>
 		    <td colspan="2" class="process3_col"></td>
@@ -335,7 +171,7 @@ function hide_show_table(col_name)
 		    <td class="process7_col"></td>
   		</tr>
   		<tr>
-		    <td>Var1</td>
+		    <td>FFA</td>
 		    <td colspan="2"><input type="text" size="7" name="P1_Var1" id="17" value={{de.P1_Var1}}>%</td>
 		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Var1" id="18" value={{de.P2_Var1}}>%</td>
 		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Var1" id="19" value={{de.P3_Var1}}>%</td>
@@ -346,7 +182,7 @@ function hide_show_table(col_name)
   		</tr>
 
   		<tr>
-		    <td>Var2</td>
+		    <td>Phos</td>
 		    <td colspan="2"><input type="text" size="7" name="P1_Var2" id="24" value={{de.P1_Var2}}>ppm</td>
 		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Var2" id="25" value={{de.P2_Var2}}>ppm</td>
 		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Var2" id="26" value={{de.P3_Var2}}>ppm</td>
@@ -356,7 +192,7 @@ function hide_show_table(col_name)
 		    <td class="process7_col"><input type="text" size="7" name="P7_Var2" id="30" value={{de.P7_Var2}}>ppm</td>
   		</tr>
     	<tr>
-		    <td>Var3</td>
+		    <td>M & V</td>
 		    <td colspan="2"><input type="text" size="7" name="P1_Var3" id="31" value={{de.P1_Var3}}>%</td>
 		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Var3" id="32" value={{de.P2_Var3}}>%</td>
 		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Var3" id="33" value={{de.P3_Var3}}>%</td>
@@ -376,7 +212,7 @@ function hide_show_table(col_name)
 		    <td class="process7_col"><input type="text" size="7" name="P7_Impurities" id="44" value={{de.P1_Impurities}}>%</td>
   		</tr>
     	<tr>
-		    <td>Mass</td>
+		    <td>TUC Mass</td>
 		    <td colspan="2"><input type="text" size="7" name="P1_Mass" id="45" value={{de.P1_Mass}}>%</td>
 		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Mass" id="46" value={{de.P2_Mass}}>%</td>
 		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Mass" id="47" value={{de.P3_Mass}}>%</td>
@@ -386,7 +222,7 @@ function hide_show_table(col_name)
 		    <td class="process7_col"></td>
   		</tr>
     	<tr>
-		    <td>Wax1</td>
+		    <td>Waxes</td>
 		    <td colspan="2"><input type="text" size="7" name="P1_Wax1" id="51" value={{de.P1_Wax1}}>ppm</td>
 		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Wax1" id="52" value={{de.P2_Wax1}}>ppm</td>
 		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Wax1" id="53" value={{de.P3_Wax1}}>ppm</td>
@@ -402,12 +238,12 @@ function hide_show_table(col_name)
   		</tr>
   		<tr>
   			<th></th>
-    		<th colspan="2"><center>Process 1</center></th>
-		    <th colspan="2" class="process2_col"><center>Process 2</center></th>
-		    <th colspan="2" class="process3_col"><center>Process 3</center></th>
-		    <th colspan="2" class="process4_col"><center>Process 4</center></th>
-		    <th colspan="2" class="process5_col"><center>Process 5</center></th>
-		    <th colspan="2" class="process6_col"><center>Process 6</center></th>
+    		<th colspan="2"><center>Super Degumming</center></th>
+		    <th colspan="2" class="process2_col"><center>Neutralisation</center></th>
+		    <th colspan="2" class="process3_col"><center>Water Washing </center></th>
+		    <th colspan="2" class="process4_col"><center>Bleaching</center></th>
+		    <th colspan="2" class="process5_col"><center>Dry Wintering </center></th>
+		    <th colspan="2" class="process6_col"><center>Deodorising</center></th>
 		    <th class="process7_col"></th>
   		</tr>
    		<tr>
@@ -429,7 +265,7 @@ function hide_show_table(col_name)
 		    
 		</tr>
    		<tr>
-		    <td>Assum1</td>
+		    <td>Oil and Dry Gums of SDG seperator</td>
 		    <td><input type="text" size="5" id="57" name="P1_Ass1" value={{de.P1_Ass1}}>ppm</td>
 		    <td><input type="text" size="5" id="58" name="P1_TheAss1" value={{de.P1_TheAss1}}>ppm</td>
 		    <td class="process2_col"><input type="text" size="5" id="59" name="P2_Ass1" value={{de.P2_Ass1}}>ppm</td>
@@ -446,7 +282,7 @@ function hide_show_table(col_name)
 		    
   		</tr>
    		<tr>
-		    <td>Assum2</td>
+		    <td>Oil loss per small discharge</td>
 		    <td><input type="text" size="5" id="69" name="P1_Ass2" value={{de.P1_Ass2}}>ppm</td>
 		    <td><input type="text" size="5" id="70" name="P1_TheAss2" value={{de.P1_TheAss2}}>ppm</td>
 		    <td class="process2_col"><input type="text" size="5" id="71" name="P2_Ass2" value={{de.P2_Ass2}}>ppm</td>
@@ -463,7 +299,7 @@ function hide_show_table(col_name)
 		    
   		</tr>
    		<tr>
-		    <td>Assum3</td>
+		    <td>Number of small discharge per hour</td>
 		    <td><input type="text" size="5" id="81" name="P1_Ass3" value={{de.P1_Ass3}}>ppm</td>
 		    <td><input type="text" size="5" id="82" name="P1_TheAss3" value={{de.P1_TheAss3}}>ppm</td>
 		    <td class="process2_col"><input type="text" size="5" id="83" name="P2_Ass3" value={{de.P2_Ass3}}>ppm</td>
@@ -480,7 +316,7 @@ function hide_show_table(col_name)
 		    
 		</tr>
 		<tr>
-		    <td>Assum4</td>
+		    <td>Average oil flow per hour</td>
 		    <td><input type="text" size="5" id="93" name="P1_Ass4" value={{de.P1_Ass4}}>ppm</td>
 		    <td><input type="text" size="5" id="94" name="P1_TheAss4" value={{de.P1_TheAss4}}>ppm</td>
 		    <td class="process2_col"><input type="text" size="5" id="95" name="P2_Ass4" value={{de.P2_Ass4}}>ppm</td>
@@ -505,10 +341,10 @@ function hide_show_table(col_name)
 
 
 	<div class="container">
-  		<center><input type=submit value="Calculate" class="btn" ></center>
+  		<center><input type=submit value="Run Calculator" class="btn"></center>
 	</div>	<br><br><br><br>
 		<div class="container">
-  		<center><input type=reset value="Reset" class="btn" ></center>
+  		<center><input type=reset value="Reset" class="btn" onclick="resetinput();"></center>
 	</div>
 <br>
 
@@ -526,12 +362,12 @@ function hide_show_table(col_name)
   		</tr>
   		<tr>
   			<th></th>
-    		<th><center>Process 1</center></th>
-		    <th class="process2_col"><center>Process 2</center></th>
-		    <th class="process3_col"><center>Process 3</center></th>
-		    <th class="process4_col"><center>Process 4</center></th>
-		    <th class="process5_col"><center>Process 5</center></th>
-		    <th class="process6_col"><center>Process 6</center></th>
+    		<th><center>Super Degumming</center></th>
+		    <th class="process2_col"><center>Neutralisation</center></th>
+		    <th class="process3_col"><center>Water Washing </center></th>
+		    <th class="process4_col"><center>Bleaching</center></th>
+		    <th class="process5_col"><center>Dry Wintering </center></th>
+		    <th class="process6_col"><center>Deodorising</center></th>
 		    
   		</tr>
   		<tr>
@@ -553,7 +389,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_FlowPercent}}>%</center></td>
   		</tr>
   		<tr>
-  			<td>Calc1</td>
+  			<td>Phos Removed</td>
 		    <td><center><input type="text" size="7" value={{de.P1_calc1}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_calc1}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_calc1}}>%</center></td>
@@ -562,7 +398,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_calc1}}>%</center></td>
   		</tr>
   		<tr>
-  			<td>Calc1withf</td>
+  			<td>Phos Removed (Using factor of 30%)</td>
 		    <td><center><input type="text" size="7" value={{de.P1_calc1withfactor}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_calc1withfactor}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_calc1withfactor}}>%</center></td>
@@ -571,7 +407,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_calc1withfactor}}>%</center></td>
   		</tr>
   		<tr>
-  			<td>Loss1</td>
+  			<td>Neutral Oil Loss% + FFA Loss(Without Discharges)</td>
 		    <td><center><input type="text" size="7" value={{de.P1_Loss1}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Loss1}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Loss1}}>%</center></td>
@@ -580,7 +416,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_Loss1}}>%</center></td>
   		</tr>
   		<tr>
-  			<td>Loss1withf</td>
+  			<td>Neutral Oil Loss% + FFA Loss(With Discharges)</td>
 		    <td><center><input type="text" size="7" value={{de.P1_Loss1withfactor}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Loss1withfactor}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Loss1withfactor}}>%</center></td>
@@ -589,7 +425,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_Loss1withfactor}}>%</center></td>
   		</tr>
   		<tr>
-  			<td>Calc2</td>
+  			<td>Impurities</td>
 		    <td><center><input type="text" size="7" value={{de.P1_calc2}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_calc2}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_calc2}}>%</center></td>
@@ -598,7 +434,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_calc2}}>%</center></td>
   		</tr>
   		<tr>
-  			<td>Calc3</td>
+  			<td>M & V Loss</td>
 		    <td><center><input type="text" size="7" value={{de.P1_calc3}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_calc3}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_calc3}}>%</center></td>
@@ -607,7 +443,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_calc3}}>%</center></td>
   		</tr>
   		<tr>
-  			<td>Calc4</td>
+  			<td>Wax Loss</td>
 		    <td><center><input type="text" size="7" value={{de.P1_calc4}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_calc4}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_calc4}}>%</center></td>
@@ -616,7 +452,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_calc4}}>%</center></td>
   		</tr>
   		<tr>
-  			<td>Calc5</td>
+  			<td>Yield Loss</td>
 		    <td><center><input type="text" size="7" value={{de.P1_calc5}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_calc5}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_calc5}}>%</center></td>
@@ -632,14 +468,14 @@ function hide_show_table(col_name)
   	
   		<table style="width:20%" align="center">
   			<tr>
-  				<th colspan="2"><center> OYA Table</center></th>
+  				<th colspan="2"><center> Overall Yield Analysis Table</center></th>
   			</tr>
   			<tr>
   				<td>TUC Mass</td>
   				<td><center><input type="text" size="7" value={{de.TUCMASS}}>%</center></td>
   			</tr>
   			<tr>
-  				<td>Flow Loss</td>
+  				<td>Oil Flow Loss</td>
   				<td><center><input type="text" size="7" value={{de.FLOWLOSS}}>%</center></td>
   			</tr>
   			<tr>
@@ -651,8 +487,8 @@ function hide_show_table(col_name)
   				<td><center><input type="text" size="7" value={{de.TUCFACT}}></center></td>
   			</tr>
   			<tr>
-  				<td>FS</td>
-  				<td><center><input type="text" size="7" value={{de.FS}}> C/T</center></td>
+  				<td>Financial Shrink</td>
+  				<td><center><input type="text" size="7" value={{de.FS}}> $/T</center></td>
   			</tr>
 
 
@@ -675,12 +511,12 @@ function hide_show_table(col_name)
   		</tr>
   		<tr>
   			<th></th>
-    		<th><center>Process 1</center></th>
-		    <th class="process2_col"><center>Process 2</center></th>
-		    <th class="process3_col"><center>Process 3</center></th>
-		    <th class="process4_col"><center>Process 4</center></th>
-		    <th class="process5_col"><center>Process 5</center></th>
-		    <th class="process6_col"><center>Process 6</center></th>
+    		<th><center>Super Degumming</center></th>
+		    <th class="process2_col"><center>Neutralisation</center></th>
+		    <th class="process3_col"><center>Water Washing </center></th>
+		    <th class="process4_col"><center>Bleaching</center></th>
+		    <th class="process5_col"><center>Dry Wintering </center></th>
+		    <th class="process6_col"><center>Deodorising</center></th>
 		    
   		</tr>
   		<tr>
@@ -693,7 +529,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_TheIter}}>ppm</center></td>
   		</tr>
   		<tr>
-  			<td>FlowPercent</td>
+  			<td>Oil Flow%</td>
 		    <td><center><input type="text" size="7" value={{de.P1_FlowPercent}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_TheFlowPercent}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_TheFlowPercent}}>%</center></td>
@@ -702,7 +538,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_TheFlowPercent}}>%</center></td>
   		</tr>
   		<tr>
-  			<td>Calc1</td>
+  			<td>Phos Removed</td>
 		    <td><center><input type="text" size="7" value={{de.P1_Thecalc1}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Thecalc1}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Thecalc1}}>%</center></td>
@@ -711,7 +547,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_Thecalc1}}>%</center></td>
   		</tr>
   		<tr>
-  			<td>Calc1withf</td>
+  			<td>Phos Removed (Using factor of 30%)</td>
 		    <td><center><input type="text" size="7" value={{de.P1_Thecalc1withfactor}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Thecalc1withfactor}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Thecalc1withfactor}}>%</center></td>
@@ -720,7 +556,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_Thecalc1withfactor}}>%</center></td>
   		</tr>
   		<tr>
-  			<td>Loss1</td>
+  			<td>Neutral Oil Loss% + FFA Loss(Without Discharges)</td>
 		    <td><center><input type="text" size="7" value={{de.P1_TheLoss1}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_TheLoss1}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_TheLoss1}}>%</center></td>
@@ -729,7 +565,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_TheLoss1}}>%</center></td>
   		</tr>
   		<tr>
-  			<td>Loss1withf</td>
+  			<td>Neutral Oil Loss% + FFA Loss(With Discharges)</td>
 		    <td><center><input type="text" size="7" value={{de.P1_TheLoss1withfactor}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_TheLoss1withfactor}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_TheLoss1withfactor}}>%</center></td>
@@ -738,7 +574,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_TheLoss1withfactor}}>%</center></td>
   		</tr>
   		<tr>
-  			<td>Calc2</td>
+  			<td>Impurities</td>
 		    <td><center><input type="text" size="7" value={{de.P1_Thecalc2}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Thecalc2}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Thecalc2}}>%</center></td>
@@ -747,7 +583,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_Thecalc2}}>%</center></td>
   		</tr>
   		<tr>
-  			<td>Calc3</td>
+  			<td>M & V Loss</td>
 		    <td><center><input type="text" size="7" value={{de.P1_Thecalc3}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Thecalc3}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Thecalc3}}>%</center></td>
@@ -756,7 +592,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_Thecalc3}}>%</center></td>
   		</tr>
   		<tr>
-  			<td>Calc4</td>
+  			<td>Wax Loss</td>
 		    <td><center><input type="text" size="7" value={{de.P1_Thecalc4}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Thecalc4}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Thecalc4}}>%</center></td>
@@ -765,7 +601,7 @@ function hide_show_table(col_name)
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_Thecalc4}}>%</center></td>
   		</tr>
   		<tr>
-  			<td>Calc5</td>
+  			<td>Yield Loss</td>
 		    <td><center><input type="text" size="7" value={{de.P1_Thecalc5}}>%</center></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Thecalc5}}>%</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Thecalc5}}>%</center></td>
@@ -781,14 +617,14 @@ function hide_show_table(col_name)
 
   		<table style="width:20%" align="center">
   			<tr>
-  				<th colspan="2"><center> OYA Table</center></th>
+  				<th colspan="2"><center>Overall Yield Analysis Table</center></th>
   			</tr>
   			<tr>
   				<td>TUC Mass</td>
   				<td><center><input type="text" size="7" value={{de.TheTUCMASS}}>%</center></td>
   			</tr>
   			<tr>
-  				<td>Flow Loss</td>
+  				<td>Oil Flow Loss</td>
   				<td><center><input type="text" size="7" value={{de.TheFLOWLOSS}}>%</center></td>
   			</tr>
   			<tr>
@@ -800,7 +636,7 @@ function hide_show_table(col_name)
   				<td><center><input type="text" size="7" value={{de.TheTUCFACT}}></center></td>
   			</tr>
   			<tr>
-  				<td>FS</td>
+  				<td>Financial Shrink</td>
   				<td><center><input type="text" size="7" value={{de.TheFS}}> C/T</center></td>
   			</tr>
 
@@ -824,86 +660,86 @@ function hide_show_table(col_name)
   			<th colspan="5"><center>ACTUAL Summary</center></th>
   		</tr>
   		<tr>
-  			<td colspan="3"><center>OMB</center></td>
+  			<td colspan="3"><center>Oil Mass Balance</center></td>
   			<td ><center>Values (KE)</center></td>
-  			<td ><center>FS Losses (C/T)</center></td>
+  			<td ><center>Financial Shrink Losses ($/T)</center></td>
   		</tr>
   		<tr>
   			<td></td>
-  			<td><center>V/Yr</center></td>
+  			<td><center>T/Yr</center></td>
   			<td><center>%</center></td>
   			<td colspan="3"></td>
   		</tr>
   		<tr>
-  			<td>OInput</td>
+  			<td>Oil Input</td>
   			<td><center><input type="text" size="7" value={{de.A_OInput}}></center></td>
   			<td colspan="3"></td>
   		</tr>
   		<tr>
-  			<td>OLossInCT</td>
+  			<td>Oil Loss in Crude Tank</td>
   			<td><center><input type="text" size="7" value={{de.A_OLCT}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_OLCT}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_OLCT}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_OLCT}}></center></td>
   		</tr>
   		<tr>
-  			<td>SD-GG</td>
+  			<td>SDG Gums</td>
   			<td><center><input type="text" size="7" value={{de.A_SDGG}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_SDGG}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_SDGG}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_SDGG}}></center></td>
   		</tr>
   		<tr>
-  			<td>AO</td>
+  			<td>Acid Oil</td>
   			<td><center><input type="text" size="7" value={{de.A_AO}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_AO}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_AO}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_AO}}></center></td>
   		</tr>
   		<tr>
-  			<td>O In C</td>
+  			<td>Oil in Clay</td>
   			<td><center><input type="text" size="7" value={{de.A_OIC}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_OIC}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_OIC}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_OIC}}></center></td>
   		</tr>
   		<tr>
-  			<td>O In WFA</td>
+  			<td>Oil in Winterising FA</td>
   			<td><center><input type="text" size="7" value={{de.A_OIWFA}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_OIWFA}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_OIWFA}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_OIWFA}}></center></td>
   		</tr>
   		<tr>
-  			<td>PMI</td>
+  			<td>Phos, Moisture, IMPS</td>
   			<td><center><input type="text" size="7" value={{de.A_PMI}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_PMI}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_PMI}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_PMI}}></center></td>
   		</tr>
   		<tr>
-  			<td>D</td>
+  			<td>Distilate</td>
   			<td><center><input type="text" size="7" value={{de.A_D}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_D}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_D}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_D}}></center></td>
   		</tr>
   		<tr>
-  			<td>WW</td>
+  			<td>Waste Water</td>
   			<td><center><input type="text" size="7" value={{de.A_WW}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_WW}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_WW}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_WW}}></center></td>
   		</tr>
   		<tr>
-  			<td>UnexplLoss</td>
+  			<td>Unexplained Losses</td>
   			<td><center><input type="text" size="7" value={{de.A_UEXLOS}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_UEXLOS}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_UEXLOS}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_UEXLOS}}></center></td>
   		</tr>
   		<tr>
-  			<td>FlowOutput</td>
+  			<td>Oil Output</td>
   			<td><center><input type="text" size="7" value={{de.A_FLOWOP}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_FLOWOP}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_FLOWOP}}></center></td>
@@ -924,86 +760,86 @@ function hide_show_table(col_name)
   			<th colspan="5"><center>THEORETICAL Summary</center></th>
   		</tr>
   		<tr>
-  			<td colspan="3"><center>OMB</center></td>
+  			<td colspan="3"><center>Oil Mass Balance</center></td>
   			<td ><center>Values (KE)</center></td>
-  			<td ><center>FS Losses (C/T)</center></td>
+  			<td ><center>Financial Shrink Losses ($/T)</center></td>
   		</tr>
   		<tr>
   			<td></td>
-  			<td><center>V/Yr</center></td>
+  			<td><center>T/Yr</center></td>
   			<td><center>%</center></td>
   			<td colspan="3"></td>
   		</tr>
   		<tr>
-  			<td>OInput</td>
+  			<td>Oil Input</td>
   			<td><center><input type="text" size="7" value={{de.A_TheOInput}}></center></td>
   			<td colspan="3"></td>
   		</tr>
   		<tr>
-  			<td>OLossInCT</td>
+  			<td>Oil Loss in Crude Tank</td>
   			<td><center><input type="text" size="7" value={{de.A_TheOLCT}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_TheOLCT}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_TheOLCT}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_TheOLCT}}></center></td>
   		</tr>
   		<tr>
-  			<td>SD-GG</td>
+  			<td>SDG Gums</td>
   			<td><center><input type="text" size="7" value={{de.A_TheSDGG}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_TheSDGG}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_TheSDGG}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_TheSDGG}}></center></td>
   		</tr>
   		<tr>
-  			<td>AO</td>
+  			<td>Acid Oil</td>
   			<td><center><input type="text" size="7" value={{de.A_TheAO}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_TheAO}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_TheAO}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_TheAO}}></center></td>
   		</tr>
   		<tr>
-  			<td>O In C</td>
+  			<td>Oil in Clay</td>
   			<td><center><input type="text" size="7" value={{de.A_TheOIC}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_TheOIC}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_TheOIC}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_TheOIC}}></center></td>
   		</tr>
   		<tr>
-  			<td>O In WFA</td>
+  			<td>Oil in Winterising FA</td>
   			<td><center><input type="text" size="7" value={{de.A_TheOIWFA}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_TheOIWFA}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_TheOIWFA}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_TheOIWFA}}></center></td>
   		</tr>
   		<tr>
-  			<td>PMI</td>
+  			<td>Phos, Moisture, IMPS</td>
   			<td><center><input type="text" size="7" value={{de.A_ThePMI}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_ThePMI}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_ThePMI}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_ThePMI}}></center></td>
   		</tr>
   		<tr>
-  			<td>D</td>
+  			<td>Distilate</td>
   			<td><center><input type="text" size="7" value={{de.A_TheD}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_TheD}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_TheD}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_TheD}}></center></td>
   		</tr>
   		<tr>
-  			<td>WW</td>
+  			<td>Waste Water</td>
   			<td><center><input type="text" size="7" value={{de.A_TheWW}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_TheWW}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_TheWW}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_TheWW}}></center></td>
   		</tr>
   		<tr>
-  			<td>UnexplLoss</td>
+  			<td>Unexplained Losses</td>
   			<td><center><input type="text" size="7" value={{de.A_TheUEXLOS}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_TheUEXLOS}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_TheUEXLOS}}></center></td>
   			<td><center><input type="text" size="7" value={{de.D_TheUEXLOS}}></center></td>
   		</tr>
   		<tr>
-  			<td>FlowOutput</td>
+  			<td>Oil Output</td>
   			<td><center><input type="text" size="7" value={{de.A_TheFLOWOP}}></center></td>
   			<td><center><input type="text" size="7" value={{de.B_TheFLOWOP}}></center></td>
   			<td><center><input type="text" size="7" value={{de.C_TheFLOWOP}}></center></td>
@@ -1024,65 +860,65 @@ function hide_show_table(col_name)
   			<th colspan="2"><center>Difference Summary</center></th>
   		</tr>
   		<tr>
-  			<td colspan="2"><center>Theoretical - Actual</center></td>
+  			<td colspan="2"><center>Delta Values<br>Theoretical - Actual</center></td>
   			
   			
   		</tr>
   		<tr>
   			<td></td>
-  			<td colspan="2"><center>In '000 C/Yr</center></td>
+  			<td colspan="2"><center>In '000 $/Yr</center></td>
   			
   		</tr>
   		<tr>
-  			<td>OInput</td>
+  			<td>Oil Input</td>
 			<td><center><input type="text" size="7" value='N/A'></td></center></td>
 
   			
   		</tr>
   		<tr>
-  			<td>OLossInCT</td>
+  			<td>Oil Loss in <br>Crude Tank</td>
   			<td><center><input type="text" size="7" value={{de.Diff_OLCT}}></center></td>
   			
   		</tr>
   		<tr>
-  			<td>SD-GG</td>
+  			<td>SDG Gums</td>
   			<td><center><input type="text" size="7" value={{de.Diff_SDGG}}></center></td>
   			
   		</tr>
   		<tr>
-  			<td>AO</td>
+  			<td>Acid Oil</td>
   			<td><center><input type="text" size="7" value={{de.Diff_AO}}></center></td>
   			
   		</tr>
   		<tr>
-  			<td>O In C</td>
+  			<td>Oil in Clay</td>
   			<td><center><input type="text" size="7" value={{de.Diff_OIC}}></center></td>
   			
   		<tr>
-  			<td>O In WFA</td>
+  			<td>Oil in <br>Winterising FA</td>
   			<td><center><input type="text" size="7" value={{de.Diff_OIWFA}}></center></td>
   			
   		</tr>
   		<tr>
-  			<td>PMI</td>
+  			<td>Phos, Moisture, <br>IMPS</td>
   			<td><center><input type="text" size="7" value={{de.Diff_PMI}}></center></td>
   			
   		<tr>
-  			<td>D</td>
+  			<td>Distilate</td>
   			<td><center><input type="text" size="7" value={{de.Diff_D}}></center></td>
   			
   		<tr>
-  			<td>WW</td>
+  			<td>Waste Water</td>
   			<td><center><input type="text" size="7" value={{de.Diff_WW}}></center></td>
   			
   		</tr>
   		<tr>
-  			<td>UnexplLoss</td>
+  			<td>Unexplained<br> Losses</td>
   			<td><center><input type="text" size="7" value={{de.Diff_UEXLOS}}></center></td>
   			
   		</tr>
   		<tr>
-  			<td>FlowOutput</td>
+  			<td>Oil Output</td>
   			<td><center><input type="text" size="7" value={{de.Diff_FLOWOP}}></center></td>
   			
   		</tr>
@@ -1097,7 +933,7 @@ function hide_show_table(col_name)
   <br>
 </div>
 </form>
-<h5 align=center>Developed by XYZ Company</h5>
+<h5 align=center>Developed & Proprietery of Hamgrid UK Limited</h5>
 
 <script>
 function openCity(evt, cityName) {
