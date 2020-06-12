@@ -5,10 +5,13 @@ from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
+
     return render(request, 'home.html');
 
 def calculate(request):
-    
+
+
+
     CO = float(request.POST["CO"])
     CTF = float(request.POST["CTF"])
     GSBC = float(request.POST["GSBC"])
@@ -111,7 +114,7 @@ def calculate(request):
     P1_Var2 = float(request.POST["P1_Var2"])
     P1_Var3 = float(request.POST["P1_Var3"])
     P1_Impurities = float(request.POST["P1_Impurities"])
-    P1_Mass = float(request.POST["P1_Mass"])
+    #P1_Mass = float(request.POST["P1_Mass"])
     P1_Wax1 = float(request.POST["P1_Wax1"])
     
     P1_Mass = P1_Var1+(P1_Var2*30/100000)+P1_Var3+P1_Impurities
@@ -123,7 +126,7 @@ def calculate(request):
     P2_Var2 = float(request.POST["P2_Var2"])
     P2_Var3 = float(request.POST["P2_Var3"])
     P2_Impurities = float(request.POST["P2_Impurities"])
-    P2_Mass = float(request.POST["P2_Mass"])
+    #P2_Mass = float(request.POST["P2_Mass"])
     P2_Wax1 = float(request.POST["P2_Wax1"])
 
     
@@ -136,7 +139,7 @@ def calculate(request):
     P3_Var2 = float(request.POST["P3_Var2"])
     P3_Var3 = float(request.POST["P3_Var3"])
     P3_Impurities = float(request.POST["P3_Impurities"])
-    P3_Mass = float(request.POST["P3_Mass"])
+    #P3_Mass = float(request.POST["P3_Mass"])
     P3_Wax1 = float(request.POST["P3_Wax1"])
 
    
@@ -148,7 +151,7 @@ def calculate(request):
     P4_Var2 = float(request.POST["P4_Var2"])
     P4_Var3 = float(request.POST["P4_Var3"])
     P4_Impurities = float(request.POST["P4_Impurities"])
-    P4_Mass = float(request.POST["P4_Mass"])
+    #P4_Mass = float(request.POST["P4_Mass"])
     P4_Wax1 = float(request.POST["P4_Wax1"])
 
     
@@ -161,7 +164,7 @@ def calculate(request):
     P5_Var2 = float(request.POST["P5_Var2"])
     P5_Var3 = float(request.POST["P5_Var3"])
     P5_Impurities = float(request.POST["P5_Impurities"])
-    P5_Mass = float(request.POST["P5_Mass"])
+    #P5_Mass = float(request.POST["P5_Mass"])
     P5_Wax1 = float(request.POST["P5_Wax1"])
 
     
@@ -174,7 +177,7 @@ def calculate(request):
     P6_Var2 = float(request.POST["P6_Var2"])
     P6_Var3 = float(request.POST["P6_Var3"])
     P6_Impurities = float(request.POST["P6_Impurities"])
-    P6_Mass = float(request.POST["P6_Mass"])
+    #P6_Mass = float(request.POST["P6_Mass"])
     P6_Wax1 = float(request.POST["P6_Wax1"])
 
     
@@ -1254,4 +1257,5 @@ def calculate(request):
 
 
     return render(request, "home.html",{'de':de})
+
      
