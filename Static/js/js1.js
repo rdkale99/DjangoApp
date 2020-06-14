@@ -343,6 +343,7 @@
 function hide_show_table(col_name)
 {
 change(col_name);
+    getidpo(col_name);
  var x=col_name;
 
  var checkbox_val=document.getElementById(col_name).checked;
@@ -371,6 +372,8 @@ change(col_name);
 
 }
 		function refresh(){
+		        localStorage.clear();
+
 				var val_check2=document.getElementById("process2_col").checked;
 				if(val_check2==true)
 					{document.getElementById("process2_col").checked = false;
@@ -398,10 +401,11 @@ change(col_name);
 
 	function oilfn(id_val) {
 			refresh();
-
+			localStorage.clear();
+			getidpo("Oil");
 			switch(id_val) {
 				  case "Oil_1":
-				  checkboxhidehide();
+				    checkboxhidehide();
 					process3_col.click();
 					break;
 				  case Oil_2:
@@ -508,6 +512,68 @@ function checkboxhide() {
   }
 }
 function resetinput(){
-
+localStorage.clear();
 window.location = '/';
+}
+
+function getidpo(id_name){
+switch(id_name){
+	case "process2_col":
+			localStorage.setItem("ddvalue2",id_name);
+			break;
+	case "process3_col":
+			localStorage.setItem("ddvalue3",id_name);
+			break;
+	case "process4_col":
+			localStorage.setItem("ddvalue4",id_name);
+			break;
+	case "process5_col":
+			localStorage.setItem("ddvalue5",id_name);
+			break;
+	case "process6_col":
+			localStorage.setItem("ddvalue6",id_name);
+			break;
+	case "Oil":
+			output=document.getElementById(id_name).value;
+			localStorage.setItem("ddvalue7",output);
+			return true;
+			break;
+		}
+
+}
+
+function getdata(){
+if (localStorage.getItem("ddvalue2") === null)
+	{}
+	else{id_val2=localStorage.getItem("ddvalue2");
+	document.getElementById(id_val2).checked=true;
+	hide_show_table(id_val2);					 }
+if (localStorage.getItem("ddvalue3") === null)
+	{}
+	else{id_val3=localStorage.getItem("ddvalue3");
+	document.getElementById(id_val3).checked=true;
+	hide_show_table(id_val3);					 }
+if (localStorage.getItem("ddvalue4") === null)
+	{}
+	else{id_val4=localStorage.getItem("ddvalue4");
+	document.getElementById(id_val4).checked=true;
+	hide_show_table(id_val4);					 }
+if (localStorage.getItem("ddvalue5") === null)
+	{}
+	else{id_val5=localStorage.getItem("ddvalue5");
+	document.getElementById(id_val5).checked=true;
+	hide_show_table(id_val5);					 }
+if (localStorage.getItem("ddvalue6") === null)
+	{}
+	else{id_val6=localStorage.getItem("ddvalue6");
+	document.getElementById(id_val6).checked=true;
+	hide_show_table(id_val6);					 }
+if (localStorage.getItem("ddvalue7") === null)
+	{}
+	else{id_val7=localStorage.getItem("ddvalue7");
+
+		document.getElementById("Oil").value = id_val7;
+						 }
+
+
 }
