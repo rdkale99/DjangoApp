@@ -5,7 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="{% static 'css/css1.css' %}">
 <script type="text/javascript" src="{% static 'js/js1.js' %}"></script>
-	<style>
+
+
+
+
+<style>
 #myDIV {
   width: 100%;
   padding: 15px 0;
@@ -13,6 +17,8 @@
   background-color: lightblue;
   margin-top: 10px;
 }</style>
+
+
 
 
 </head>
@@ -36,25 +42,25 @@
 			<br>
 		<a href="#" onClick="autoFill(); return true;" >Click to Autofill</a>
 		<label for="Oil">Choose Oil Type:</label>
-		  <select name="Oil" id="Oil">
-			  <option id="Oil_1" onclick="oilfn(this.id);">--SELECT--</option>
-			<option id="Oil_17" onclick="oilfn(this.id);" >Customize Oil</option>
-			<option id="Oil_1"  onclick="oilfn(this.id);" >Palm Oil</option>
-			<option id="Oil_2"  onclick="oilfn(this.id);" >SunFlower Oil 1</option>
-			<option id="Oil_3"  onclick="oilfn(this.id);" >SunFlower Oil 2</option>
-			<option id="Oil_4"  onclick="oilfn(this.id);" >SunFlower Oil 3</option>
-			<option id="Oil_5"  onclick="oilfn(this.id);" >SunFlower Oil 4</option>
-			<option id="Oil_6"  onclick="oilfn(this.id);" >HOCAN</option>
-			<option id="Oil_7"  onclick="oilfn(this.id);" >CORN</option>
-			<option id="Oil_8"  onclick="oilfn(this.id);" >CNO</option>
-			<option id="Oil_9"  onclick="oilfn(this.id);" >SBO</option>
-			<option id="Oil_10" onclick="oilfn(this.id);" >HYDRO SBO</option>
-			<option id="Oil_11" onclick="oilfn(this.id);" >CIE SBO</option>
-			<option id="Oil_12" onclick="oilfn(this.id);" >ROL</option>
-			<option id="Oil_13" onclick="oilfn(this.id);" >RPS</option>
-			<option id="Oil_14" onclick="oilfn(this.id);" >RPKO</option>
-			<option id="Oil_15" onclick="oilfn(this.id);" >RPKOL</option>
-			<option id="Oil_16" onclick="oilfn(this.id);" >RPKST</option>
+		  <select name="Oil" id="Oil" onchange="getidpo(this.id);">
+			<option id="Oil_1" onclick="oilfn(this.id);"  >--SELECT--     </option>
+			<option id="Oil_17" value="Customize Oil  " onclick="oilfn(this.id);" >Customize Oil  </option>
+			<option id="Oil_1"  value="Palm Oil       " onclick="oilfn(this.id);" >Palm Oil       </option>
+			<option id="Oil_2"  value="SunFlower Oil 1" onclick="oilfn(this.id);" >SunFlower Oil 1</option>
+			<option id="Oil_3"  value="SunFlower Oil 2" onclick="oilfn(this.id);" >SunFlower Oil 2</option>
+			<option id="Oil_4"  value="SunFlower Oil 3" onclick="oilfn(this.id);" >SunFlower Oil 3</option>
+			<option id="Oil_5"  value="SunFlower Oil 4" onclick="oilfn(this.id);" >SunFlower Oil 4</option>
+			<option id="Oil_6"  value="HOCAN          " onclick="oilfn(this.id);" >HOCAN          </option>
+			<option id="Oil_7"  value="CORN           " onclick="oilfn(this.id);" >CORN             </option>
+			<option id="Oil_8"  value="CNO            " onclick="oilfn(this.id);" >CNO              </option>
+			<option id="Oil_9"  value="SBO            " onclick="oilfn(this.id);" >SBO              </option>
+			<option id="Oil_10" value="HYDRO SBO      " onclick="oilfn(this.id);" >HYDRO SBO         </option>
+			<option id="Oil_11" value="CIE SBO        " onclick="oilfn(this.id);" >CIE SBO            </option>
+			<option id="Oil_12" value="ROL            " onclick="oilfn(this.id);" >ROL                 </option>
+			<option id="Oil_13" value="RPS            " onclick="oilfn(this.id);" >RPS                   </option>
+			<option id="Oil_14" value="RPKO           " onclick="oilfn(this.id);" >RPKO                  </option>
+			<option id="Oil_15" value="RPKOL          " onclick="oilfn(this.id);" >RPKOL                 </option>
+			<option id="Oil_16" value="RPKST          " onclick="oilfn(this.id);" >RPKST                 </option>
 		  </select>
 		<br>
 		<br></center>
@@ -86,11 +92,11 @@
     		<td><input required type="text" size="8" name="AO" id="15" value={{de.AO}}>$</td>
   		</tr>
 		</table>
-	
 
 
 
-	
+
+
  		<table style="width:33.3%" align="left">
   		<tr>
     		<th colspan="4"><center>Data</center></th>
@@ -102,10 +108,10 @@
     		<td><input required type="text" size="8" name="Hours" id="4" value={{de.Hours}}>Hr/Yr</td>
     	</tr>
 		</table>
-	
 
 
-	
+
+
  		<table style="width:33.3%" align="right">
   		<tr>
     		<th colspan="4"><center>Other Losses</center></th>
@@ -131,21 +137,22 @@
     		<td><input required type="text" size="8" name="TheUEXLOS" id="14" value={{de.TheUEXLOS}}>%</td>
    		</tr>
    		</table>
-   	
+
 
    	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div id="myDIV" style="display: none;" >
+
 	<p>Select Process to Bypass</p>
-	 <li><input type="checkbox" value="hide" id="process2_col" onclick="hide_show_table(this.id);" >Process2</li>
-	 <li><input type="checkbox" value="hide" id="process3_col" onclick="hide_show_table(this.id);" >Process3</li>
-	 <li><input type="checkbox" value="hide" id="process4_col" onclick="hide_show_table(this.id);" >Process4</li>
-     <li><input type="checkbox" value="hide" id="process5_col" onclick="hide_show_table(this.id);" >Process5</li>
-	 <li><input type="checkbox" value="hide" id="process6_col" onclick="hide_show_table(this.id);" >Process6</li>
+	<li><input type="checkbox" value="hide" id="process2_col" onclick="hide_show_table(this.id);" >Process2</li>
+	<li><input type="checkbox" value="hide" id="process3_col" onclick="hide_show_table(this.id);" >Process3</li>
+	<li><input type="checkbox" value="hide" id="process4_col" onclick="hide_show_table(this.id);" >Process4</li>
+    <li><input type="checkbox" value="hide" id="process5_col" onclick="hide_show_table(this.id);" >Process5</li>
+	<li><input type="checkbox" value="hide" id="process6_col" onclick="hide_show_table(this.id);" >Process6</li>
 
 	</div>
 
-	
+
  		<table style="width:100%" align="center">
   		<tr>
   			<th colspan="14"><center>Input Oil Data</center></th>
@@ -234,7 +241,7 @@
   		<tr></tr>
    		<tr>
     		<th colspan="14"><center>Assumptions</center></th>
-   
+
   		</tr>
   		<tr>
   			<th></th>
@@ -248,7 +255,7 @@
   		</tr>
    		<tr>
 		    <td></td>
-		 
+
 		    <td>Actual</td>
 		    <td>Theoretical</td>
 		    <td class="process2_col">Actual</td>
@@ -262,7 +269,7 @@
 		    <td class="process6_col">Actual</td>
 		    <td class="process6_col">Theoretical</td>
 		    <td class="process7_col"></td>
-		    
+
 		</tr>
    		<tr>
 		    <td>Oil and Dry Gums of SDG seperator</td>
@@ -279,7 +286,7 @@
 		    <td class="process6_col"><input type="text" size="5" id="67" name="P6_Ass1" value={{de.P6_Ass1}}>ppm</td>
 		    <td class="process6_col"><input type="text" size="5" id="68" name="P6_TheAss1" value={{de.P6_TheAss1}}>ppm</td>
 		    <td class="process7_col"></td>
-		    
+
   		</tr>
    		<tr>
 		    <td>Oil loss per small discharge</td>
@@ -296,7 +303,7 @@
 		    <td class="process6_col"><input type="text" size="5" id="79" name="P6_Ass2" value={{de.P6_Ass2}}>ppm</td>
 		    <td class="process6_col"><input type="text" size="5" id="80" name="P6_TheAss2" value={{de.P6_TheAss2}}>ppm</td>
 		    <td class="process7_col"></td>
-		    
+
   		</tr>
    		<tr>
 		    <td>Number of small discharge per hour</td>
@@ -313,7 +320,7 @@
 		    <td class="process6_col"><input type="text" size="5" id="91" name="P6_Ass3" value={{de.P6_Ass3}}>ppm</td>
 		    <td class="process6_col"><input type="text" size="5" id="92" name="P6_TheAss3" value={{de.P6_TheAss3}}>ppm</td>
 		    <td class="process7_col"></td>
-		    
+
 		</tr>
 		<tr>
 		    <td>Average oil flow per hour</td>
@@ -330,12 +337,12 @@
 		    <td class="process6_col"><input type="text" size="5" id="103" name="P6_Ass4" value={{de.P6_Ass4}}>ppm</td>
 		    <td class="process6_col"><input type="text" size="5" id="104" name="P6_TheAss4" value={{de.P6_TheAss4}}>ppm</td>
 		    <td class="process7_col"></td>
-		    
+
 		</tr>
 		</table>
 		<br>
-		
-	 
+
+
 	<br>
 	<br>
 
@@ -368,7 +375,7 @@
 		    <th class="process4_col"><center>Bleaching</center></th>
 		    <th class="process5_col"><center>Dry Wintering </center></th>
 		    <th class="process6_col"><center>Deodorising</center></th>
-		    
+
   		</tr>
   		<tr>
   			<td>Ireration</td>
@@ -461,11 +468,11 @@
 		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_calc5}}>%</center></td>
   		</tr>
   		</table>
-  	
+
   	<br>
   	<br>
 
-  	
+
   		<table style="width:20%" align="center">
   			<tr>
   				<th colspan="2"><center> Overall Yield Analysis Table</center></th>
@@ -495,16 +502,16 @@
 
 
   		</table>
-  	
+
   	<br>
   	<br>
-  
+
 </div>
 
 <div id="TheoreticalData" class="tabcontent">
   <h3 align=center>Theoretical Data</h3>
   <br>
-  
+
  		<table style="width:100%" align="center">
   		<tr>
   			<th colspan="7"><center>Calculations</center></th>
@@ -517,7 +524,7 @@
 		    <th class="process4_col"><center>Bleaching</center></th>
 		    <th class="process5_col"><center>Dry Wintering </center></th>
 		    <th class="process6_col"><center>Deodorising</center></th>
-		    
+
   		</tr>
   		<tr>
   			<td>Ireration</td>
@@ -644,17 +651,17 @@
 
 
   		</table>
-  	
+
   	<br>
   	<br>
-  
+
 </div>
 
 
 <div id="Summary" class="tabcontent">
   <h3 align=center>Summary</h3>
   <br>
-  
+
   	<table style="width:35.8%" align="left">
   		<tr>
   			<th colspan="5"><center>ACTUAL Summary</center></th>
@@ -753,8 +760,8 @@
   			<td><center><input type="text" size="7" value={{de.D_TOTAL}}></center></td>
   		</tr>
   	</table>
-  
-  	
+
+
   	<table style="width:35.8%" align="left">
   		<tr>
   			<th colspan="5"><center>THEORETICAL Summary</center></th>
@@ -853,82 +860,82 @@
   			<td><center><input type="text" size="7" value={{de.D_TheTOTAL}}></center></td>
   		</tr>
   	</table>
-    
-   
+
+
   	<table style="width:28.3%" >
   		<tr>
   			<th colspan="2"><center>Difference Summary</center></th>
   		</tr>
   		<tr>
   			<td colspan="2"><center>Delta Values<br>Theoretical - Actual</center></td>
-  			
-  			
+
+
   		</tr>
   		<tr>
   			<td></td>
   			<td colspan="2"><center>In '000 $/Yr</center></td>
-  			
+
   		</tr>
   		<tr>
   			<td>Oil Input</td>
 			<td><center><input type="text" size="7" value='N/A'></td></center></td>
 
-  			
+
   		</tr>
   		<tr>
   			<td>Oil Loss in <br>Crude Tank</td>
   			<td><center><input type="text" size="7" value={{de.Diff_OLCT}}></center></td>
-  			
+
   		</tr>
   		<tr>
   			<td>SDG Gums</td>
   			<td><center><input type="text" size="7" value={{de.Diff_SDGG}}></center></td>
-  			
+
   		</tr>
   		<tr>
   			<td>Acid Oil</td>
   			<td><center><input type="text" size="7" value={{de.Diff_AO}}></center></td>
-  			
+
   		</tr>
   		<tr>
   			<td>Oil in Clay</td>
   			<td><center><input type="text" size="7" value={{de.Diff_OIC}}></center></td>
-  			
+
   		<tr>
   			<td>Oil in <br>Winterising FA</td>
   			<td><center><input type="text" size="7" value={{de.Diff_OIWFA}}></center></td>
-  			
+
   		</tr>
   		<tr>
   			<td>Phos, Moisture, <br>IMPS</td>
   			<td><center><input type="text" size="7" value={{de.Diff_PMI}}></center></td>
-  			
+
   		<tr>
   			<td>Distilate</td>
   			<td><center><input type="text" size="7" value={{de.Diff_D}}></center></td>
-  			
+
   		<tr>
   			<td>Waste Water</td>
   			<td><center><input type="text" size="7" value={{de.Diff_WW}}></center></td>
-  			
+
   		</tr>
   		<tr>
   			<td>Unexplained<br> Losses</td>
   			<td><center><input type="text" size="7" value={{de.Diff_UEXLOS}}></center></td>
-  			
+
   		</tr>
   		<tr>
   			<td>Oil Output</td>
   			<td><center><input type="text" size="7" value={{de.Diff_FLOWOP}}></center></td>
-  			
+
   		</tr>
   		<tr>
   			<td>Total</td>
   			<td><center><input type="text" size="7" value={{de.Diff_TOTAL}}></center></td>
-  			
+
   		</tr>
   	</table>
-  
+
   <br>
   <br>
 </div>
@@ -951,9 +958,12 @@ function openCity(evt, cityName) {
 }
 
 // Get the element with id="defaultOpen" and click on it
+
 document.getElementById("defaultOpen").click();
+
+getdata();
 </script>
-   
+
 </body>
 </html> 
 
