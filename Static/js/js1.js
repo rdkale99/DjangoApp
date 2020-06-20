@@ -406,7 +406,7 @@ change(col_name);
 			switch(id_val) {
 				  case "Oil_1":
 				    checkboxhidehide();
-					process3_col.click();
+
 					break;
 				  case Oil_2:
 				  checkboxhidehide();
