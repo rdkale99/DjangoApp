@@ -40,7 +40,7 @@
 		<a href="#" onClick="autoFill(); return true;" >Click to Autofill</a>
 		<label for="Oil">Choose Oil Type:</label>
 		  <select name="Oil" id="Oil" onchange="getidpo(this.id);">
-			<option id="Oil_1" onclick="oilfn(this.id);"  >--SELECT--     </option>
+			<option id="Oil_1"  onclick="oilfn(this.id);"  >--SELECT--     </option>
 			<option id="Oil_17" value="Customize Oil  " onclick="oilfn(this.id);" >Customize Oil  </option>
 			<option id="Oil_1"  value="Palm Oil       " onclick="oilfn(this.id);" >Palm Oil       </option>
 			<option id="Oil_2"  value="SunFlower Oil 1" onclick="oilfn(this.id);" >SunFlower Oil 1</option>
@@ -139,14 +139,14 @@
    	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 	<div id="myDIV" style="display: none;" >
-
-	<p>Select Process to Bypass</p>
-	<li><input type="checkbox" value="hide" id="process2_col" onclick="hide_show_table(this.id);" >Process2</li>
-	<li><input type="checkbox" value="hide" id="process3_col" onclick="hide_show_table(this.id);" >Process3</li>
-	<li><input type="checkbox" value="hide" id="process4_col" onclick="hide_show_table(this.id);" >Process4</li>
-    <li><input type="checkbox" value="hide" id="process5_col" onclick="hide_show_table(this.id);" >Process5</li>
-	<li><input type="checkbox" value="hide" id="process6_col" onclick="hide_show_table(this.id);" >Process6</li>
-
+	<p><b>Select Process to Bypass</b></p>
+	<pre>
+	<input type="checkbox" value="hide" id="process2_col" onclick="hide_show_table(this.id);" >Neutralisation     <br>
+	<input type="checkbox" value="hide" id="process3_col" onclick="hide_show_table(this.id);" >Water Washing      <br>
+	<input type="checkbox" value="hide" id="process4_col" onclick="hide_show_table(this.id);" >Bleaching          <br>
+    <input type="checkbox" value="hide" id="process5_col" onclick="hide_show_table(this.id);" >Dry Winterising<br>
+	<input type="checkbox" value="hide" id="process6_col" onclick="hide_show_table(this.id);" >Deodorising        <br>
+	</pre>
 	</div>
 
 
