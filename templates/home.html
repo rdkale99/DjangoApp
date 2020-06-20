@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="{% static 'css/css1.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/css3.css' %}">
 <script type="text/javascript" src="{% static 'js/js1.js' %}"></script>
 
 <style>
@@ -100,7 +100,7 @@
 		</tr>
   		<tr>
    			<td>Oil FlowRate</td>
-    		<td><input required type="text" size="8" name="Flowrate" id="3" value={{de.Flowrate}}>V/Yr</td>
+    		<td><input required type="text" size="8" name="Flowrate" id="3" value={{de.Flowrate}}>T/Yr</td>
    			<td>Hours Worked</td>
     		<td><input required type="text" size="8" name="Hours" id="4" value={{de.Hours}}>Hr/Yr</td>
     	</tr>
@@ -154,6 +154,10 @@
   		<tr>
   			<th colspan="14"><center>Input Oil Data</center></th>
   		</tr>
+		<tr>
+
+    	<td colspan="14"><center>Oil Flow Percent : <input required type="text" size="7" id="16" name="P1_FlowPercent" value={{de.P1_FlowPercent}}>%</center></td>
+		</tr>
   		<tr>
   			<th></th>
     		<th colspan="2"><center>Super Degumming</center></th>
@@ -164,16 +168,16 @@
 		    <th colspan="2" id="process6_col_head"><center>Deodorising</center></th>
 		    <th  id="process7_col_head"><center>Iterations</center></th>
   		</tr>
-    	<tr>
-		    <td>Oil Flow%</td>
-		    <td colspan="2"><input required type="text" size="7" id="16" name="P1_FlowPercent" value={{de.P1_FlowPercent}}>%</td>
-		    <td colspan="2" class="process2_col"></td>
-		    <td colspan="2" class="process3_col"></td>
-		    <td colspan="2" class="process4_col"></td>
-		    <td colspan="2" class="process5_col"></td>
-		    <td colspan="2" class="process6_col"></td>
-		    <td class="process7_col"></td>
-  		</tr>
+
+
+
+
+
+
+
+
+
+
   		<tr>
 		    <td>FFA</td>
 		    <td colspan="2"><input type="text" size="7" name="P1_Var1" id="17" value={{de.P1_Var1}}>%</td>
@@ -216,7 +220,7 @@
 		    <td class="process7_col"><input type="text" size="7" name="P7_Impurities" id="44" value={{de.P1_Impurities}}>%</td>
   		</tr>
     	<tr>
-		    <td>TUC Mass</td>
+		    <td>Total Undesired Components Mass</td>
 		    <td colspan="2"><input type="text" size="7" name="P1_Mass" id="45" value={{de.P1_Mass}}>%</td>
 		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Mass" id="46" value={{de.P2_Mass}}>%</td>
 		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Mass" id="47" value={{de.P3_Mass}}>%</td>
@@ -270,69 +274,69 @@
 		</tr>
    		<tr>
 		    <td>Oil and Dry Gums of SDG seperator</td>
-		    <td><input type="text" size="5" id="57" name="P1_Ass1" value={{de.P1_Ass1}}>ppm</td>
-		    <td><input type="text" size="5" id="58" name="P1_TheAss1" value={{de.P1_TheAss1}}>ppm</td>
-		    <td class="process2_col"><input type="text" size="5" id="59" name="P2_Ass1" value={{de.P2_Ass1}}>ppm</td>
-		    <td class="process2_col"><input type="text" size="5" id="60" name="P2_TheAss1" value={{de.P2_TheAss1}}>ppm</td>
-		    <td class="process3_col"><input type="text" size="5" id="61" name="P3_Ass1" value={{de.P3_Ass1}}>ppm</td>
-		    <td class="process3_col"><input type="text" size="5" id="62" name="P3_TheAss1" value={{de.P3_TheAss1}}>ppm</td>
-		    <td class="process4_col"><input type="text" size="5" id="63" name="P4_Ass1" value={{de.P4_Ass1}}>ppm</td>
-        	<td class="process4_col"><input type="text" size="5" id="64" name="P4_TheAss1" value={{de.P4_TheAss1}}>ppm</td>
-		    <td class="process5_col"><input type="text" size="5" id="65" name="P5_Ass1" value={{de.P5_Ass1}}>ppm</td>
-		    <td class="process5_col"><input type="text" size="5" id="66" name="P5_TheAss1" value={{de.P5_TheAss1}}>ppm</td>
-		    <td class="process6_col"><input type="text" size="5" id="67" name="P6_Ass1" value={{de.P6_Ass1}}>ppm</td>
-		    <td class="process6_col"><input type="text" size="5" id="68" name="P6_TheAss1" value={{de.P6_TheAss1}}>ppm</td>
+		    <td><input type="text" size="5" id="57" name="P1_Ass1" value={{de.P1_Ass1}}>%</td>
+		    <td><input type="text" size="5" id="58" name="P1_TheAss1" value={{de.P1_TheAss1}}>%</td>
+		    <td class="process2_col"><input type="text" size="5" id="59" name="P2_Ass1" value={{de.P2_Ass1}}>%</td>
+		    <td class="process2_col"><input type="text" size="5" id="60" name="P2_TheAss1" value={{de.P2_TheAss1}}>%</td>
+		    <td class="process3_col"><input type="text" size="5" id="61" name="P3_Ass1" value={{de.P3_Ass1}}>%</td>
+		    <td class="process3_col"><input type="text" size="5" id="62" name="P3_TheAss1" value={{de.P3_TheAss1}}>%</td>
+		    <td class="process4_col"><input type="text" size="5" id="63" name="P4_Ass1" value={{de.P4_Ass1}}>%</td>
+        	<td class="process4_col"><input type="text" size="5" id="64" name="P4_TheAss1" value={{de.P4_TheAss1}}>%</td>
+		    <td class="process5_col"><input type="text" size="5" id="65" name="P5_Ass1" value={{de.P5_Ass1}}>%</td>
+		    <td class="process5_col"><input type="text" size="5" id="66" name="P5_TheAss1" value={{de.P5_TheAss1}}>%</td>
+		    <td class="process6_col"><input type="text" size="5" id="67" name="P6_Ass1" value={{de.P6_Ass1}}>%</td>
+		    <td class="process6_col"><input type="text" size="5" id="68" name="P6_TheAss1" value={{de.P6_TheAss1}}>%</td>
 		    <td class="process7_col"></td>
 
   		</tr>
    		<tr>
 		    <td>Oil loss per small discharge</td>
-		    <td><input type="text" size="5" id="69" name="P1_Ass2" value={{de.P1_Ass2}}>ppm</td>
-		    <td><input type="text" size="5" id="70" name="P1_TheAss2" value={{de.P1_TheAss2}}>ppm</td>
-		    <td class="process2_col"><input type="text" size="5" id="71" name="P2_Ass2" value={{de.P2_Ass2}}>ppm</td>
-		    <td class="process2_col"><input type="text" size="5" id="72" name="P2_TheAss2" value={{de.P2_TheAss2}}>ppm</td>
-		    <td class="process3_col"><input type="text" size="5" id="73" name="P3_Ass2" value={{de.P3_Ass2}}>ppm</td>
-		    <td class="process3_col"><input type="text" size="5" id="74" name="P3_TheAss2" value={{de.P3_TheAss2}}>ppm</td>
-		    <td class="process4_col"><input type="text" size="5" id="75" name="P4_Ass2" value={{de.P4_Ass2}}>ppm</td>
-        	<td class="process4_col"><input type="text" size="5" id="76" name="P4_TheAss2" value={{de.P4_TheAss2}}>ppm</td>
-		    <td class="process5_col"><input type="text" size="5" id="77" name="P5_Ass2" value={{de.P5_Ass2}}>ppm</td>
-		    <td class="process5_col"><input type="text" size="5" id="78" name="P5_TheAss2" value={{de.P5_TheAss2}}>ppm</td>
-		    <td class="process6_col"><input type="text" size="5" id="79" name="P6_Ass2" value={{de.P6_Ass2}}>ppm</td>
-		    <td class="process6_col"><input type="text" size="5" id="80" name="P6_TheAss2" value={{de.P6_TheAss2}}>ppm</td>
+		    <td><input type="text" size="5" id="69" name="P1_Ass2" value={{de.P1_Ass2}}>kg</td>
+		    <td><input type="text" size="5" id="70" name="P1_TheAss2" value={{de.P1_TheAss2}}>kg</td>
+		    <td class="process2_col"><input type="text" size="5" id="71" name="P2_Ass2" value={{de.P2_Ass2}}>kg</td>
+		    <td class="process2_col"><input type="text" size="5" id="72" name="P2_TheAss2" value={{de.P2_TheAss2}}>kg</td>
+		    <td class="process3_col"><input type="text" size="5" id="73" name="P3_Ass2" value={{de.P3_Ass2}}>kg</td>
+		    <td class="process3_col"><input type="text" size="5" id="74" name="P3_TheAss2" value={{de.P3_TheAss2}}>kg</td>
+		    <td class="process4_col"><input type="text" size="5" id="75" name="P4_Ass2" value={{de.P4_Ass2}}>kg</td>
+        	<td class="process4_col"><input type="text" size="5" id="76" name="P4_TheAss2" value={{de.P4_TheAss2}}>kg</td>
+		    <td class="process5_col"><input type="text" size="5" id="77" name="P5_Ass2" value={{de.P5_Ass2}}>kg</td>
+		    <td class="process5_col"><input type="text" size="5" id="78" name="P5_TheAss2" value={{de.P5_TheAss2}}>kg</td>
+		    <td class="process6_col"><input type="text" size="5" id="79" name="P6_Ass2" value={{de.P6_Ass2}}>kg</td>
+		    <td class="process6_col"><input type="text" size="5" id="80" name="P6_TheAss2" value={{de.P6_TheAss2}}>kg</td>
 		    <td class="process7_col"></td>
 
   		</tr>
    		<tr>
 		    <td>Number of small discharge per hour</td>
-		    <td><input type="text" size="5" id="81" name="P1_Ass3" value={{de.P1_Ass3}}>ppm</td>
-		    <td><input type="text" size="5" id="82" name="P1_TheAss3" value={{de.P1_TheAss3}}>ppm</td>
-		    <td class="process2_col"><input type="text" size="5" id="83" name="P2_Ass3" value={{de.P2_Ass3}}>ppm</td>
-		    <td class="process2_col"><input type="text" size="5" id="84" name="P2_TheAss3" value={{de.P2_TheAss3}}>ppm</td>
-		    <td class="process3_col"><input type="text" size="5" id="85" name="P3_Ass3" value={{de.P3_Ass3}}>ppm</td>
-		    <td class="process3_col"><input type="text" size="5" id="86" name="P3_TheAss3" value={{de.P3_TheAss3}}>ppm</td>
-		    <td class="process4_col"><input type="text" size="5" id="87" name="P4_Ass3" value={{de.P4_Ass3}}>ppm</td>
-		    <td class="process4_col"><input type="text" size="5" id="88" name="P4_TheAss3" value={{de.P4_TheAss3}}>ppm</td>
-		    <td class="process5_col"><input type="text" size="5" id="89" name="P5_Ass3" value={{de.P5_Ass3}}>ppm</td>
-		    <td class="process5_col"><input type="text" size="5" id="90" name="P5_TheAss3" value={{de.P5_TheAss3}}>ppm</td>
-		    <td class="process6_col"><input type="text" size="5" id="91" name="P6_Ass3" value={{de.P6_Ass3}}>ppm</td>
-		    <td class="process6_col"><input type="text" size="5" id="92" name="P6_TheAss3" value={{de.P6_TheAss3}}>ppm</td>
+		    <td><input type="text" size="5" id="81" name="P1_Ass3" value={{de.P1_Ass3}}></td>
+		    <td><input type="text" size="5" id="82" name="P1_TheAss3" value={{de.P1_TheAss3}}></td>
+		    <td class="process2_col"><input type="text" size="5" id="83" name="P2_Ass3" value={{de.P2_Ass3}}></td>
+		    <td class="process2_col"><input type="text" size="5" id="84" name="P2_TheAss3" value={{de.P2_TheAss3}}></td>
+		    <td class="process3_col"><input type="text" size="5" id="85" name="P3_Ass3" value={{de.P3_Ass3}}></td>
+		    <td class="process3_col"><input type="text" size="5" id="86" name="P3_TheAss3" value={{de.P3_TheAss3}}></td>
+		    <td class="process4_col"><input type="text" size="5" id="87" name="P4_Ass3" value={{de.P4_Ass3}}></td>
+		    <td class="process4_col"><input type="text" size="5" id="88" name="P4_TheAss3" value={{de.P4_TheAss3}}></td>
+		    <td class="process5_col"><input type="text" size="5" id="89" name="P5_Ass3" value={{de.P5_Ass3}}></td>
+		    <td class="process5_col"><input type="text" size="5" id="90" name="P5_TheAss3" value={{de.P5_TheAss3}}></td>
+		    <td class="process6_col"><input type="text" size="5" id="91" name="P6_Ass3" value={{de.P6_Ass3}}></td>
+		    <td class="process6_col"><input type="text" size="5" id="92" name="P6_TheAss3" value={{de.P6_TheAss3}}></td>
 		    <td class="process7_col"></td>
 
 		</tr>
 		<tr>
 		    <td>Average oil flow per hour</td>
-		    <td><input type="text" size="5" id="93" name="P1_Ass4" value={{de.P1_Ass4}}>ppm</td>
-		    <td><input type="text" size="5" id="94" name="P1_TheAss4" value={{de.P1_TheAss4}}>ppm</td>
-		    <td class="process2_col"><input type="text" size="5" id="95" name="P2_Ass4" value={{de.P2_Ass4}}>ppm</td>
-		    <td class="process2_col"><input type="text" size="5" id="96" name="P2_TheAss4" value={{de.P2_TheAss4}}>ppm</td>
-		    <td class="process3_col"><input type="text" size="5" id="97" name="P3_Ass4" value={{de.P3_Ass4}}>ppm</td>
-		    <td class="process3_col"><input type="text" size="5" id="98" name="P3_TheAss4" value={{de.P3_TheAss4}}>ppm</td>
-		    <td class="process4_col"><input type="text" size="5" id="99" name="P4_Ass4" value={{de.P4_Ass4}}>ppm</td>
-		    <td class="process4_col"><input type="text" size="5" id="100" name="P4_TheAss4" value={{de.P4_TheAss4}}>ppm</td>
-		    <td class="process5_col"><input type="text" size="5" id="101" name="P5_Ass4" value={{de.P5_Ass4}}>ppm</td>
-		    <td class="process5_col"><input type="text" size="5" id="102" name="P5_TheAss4" value={{de.P5_TheAss4}}>ppm</td>
-		    <td class="process6_col"><input type="text" size="5" id="103" name="P6_Ass4" value={{de.P6_Ass4}}>ppm</td>
-		    <td class="process6_col"><input type="text" size="5" id="104" name="P6_TheAss4" value={{de.P6_TheAss4}}>ppm</td>
+		    <td><input type="text" size="5" id="93" name="P1_Ass4" value={{de.P1_Ass4}}>T/hr</td>
+		    <td><input type="text" size="5" id="94" name="P1_TheAss4" value={{de.P1_TheAss4}}>T/hr</td>
+		    <td class="process2_col"><input type="text" size="5" id="95" name="P2_Ass4" value={{de.P2_Ass4}}>T/hr</td>
+		    <td class="process2_col"><input type="text" size="5" id="96" name="P2_TheAss4" value={{de.P2_TheAss4}}>T/hr</td>
+		    <td class="process3_col"><input type="text" size="5" id="97" name="P3_Ass4" value={{de.P3_Ass4}}>T/hr</td>
+		    <td class="process3_col"><input type="text" size="5" id="98" name="P3_TheAss4" value={{de.P3_TheAss4}}>T/hr</td>
+		    <td class="process4_col"><input type="text" size="5" id="99" name="P4_Ass4" value={{de.P4_Ass4}}>T/hr</td>
+		    <td class="process4_col"><input type="text" size="5" id="100" name="P4_TheAss4" value={{de.P4_TheAss4}}>T/hr</td>
+		    <td class="process5_col"><input type="text" size="5" id="101" name="P5_Ass4" value={{de.P5_Ass4}}>T/hr</td>
+		    <td class="process5_col"><input type="text" size="5" id="102" name="P5_TheAss4" value={{de.P5_TheAss4}}>T/hr</td>
+		    <td class="process6_col"><input type="text" size="5" id="103" name="P6_Ass4" value={{de.P6_Ass4}}>T/hr</td>
+		    <td class="process6_col"><input type="text" size="5" id="104" name="P6_TheAss4" value={{de.P6_TheAss4}}>T/hr</td>
 		    <td class="process7_col"></td>
 
 		</tr>
@@ -340,7 +344,6 @@
 		<br>
 
 
-	<br>
 	<br>
 
 
