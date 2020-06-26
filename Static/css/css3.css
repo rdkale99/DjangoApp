@@ -179,8 +179,17 @@ tbody {
   color: darkslategray;
 }
 
+
+.pagebreak{
+    clear: both;
+    page-break-after: always;
+    }
 @media print
 {
+    .pagebreak{
+    clear: both;
+    page-break-after: always;
+    }
     .np{display:none;}
     h5{display:none;}
     .container{display:none;}
@@ -191,8 +200,10 @@ tbody {
     .tab{display: none;}
     html
     {
-        transform: scale(1.0);transform-origin: 0 0;
+        transform: scale(.9);transform-origin: 0 0;
     }
+
+
     @page
     {
         size: 297mm 210mm; /* landscape */
@@ -200,4 +211,6 @@ tbody {
         margin: 0mm;
         margin-right: 0mm; /* for compatibility with both A4 and Letter */
     }
+
+
 }
