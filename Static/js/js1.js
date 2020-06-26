@@ -402,6 +402,7 @@ change(col_name);
 	function oilfn(id_val) {
 			refresh();
 			localStorage.clear();
+			document.getElementById("proil").value=document.getElementById(id_val).value;
 			getidpo("Oil");
 			switch(id_val) {
 				  case "Oil_1":
@@ -540,6 +541,7 @@ switch(id_name){
 			break;
 		}
 
+
 }
 
 function getdata(){
@@ -577,3 +579,5 @@ if (localStorage.getItem("ddvalue7") === null)
 
 
 }
+
+
