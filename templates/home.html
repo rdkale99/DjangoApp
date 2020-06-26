@@ -21,12 +21,13 @@
 </head>
 <body>
 
-<h1 align=center>Test Site UK</h1>
+<h1 align=center>Test Site</h1>
 	<div class="tab">
   		<button class="tablinks" onclick="openCity(event, 'Input')" id="defaultOpen">Process Input</button>
   		<button class="tablinks" onclick="openCity(event, 'ActualData')">Actual Calculation</button>
   		<button class="tablinks" onclick="openCity(event, 'TheoreticalData')">Theoretical Calculation</button>
   		<button class="tablinks" onclick="openCity(event, 'Summary')">Summary Output</button>
+		<button class="tablinks" onclick="openCity(event, 'print')">Print Data</button>
 	</div>
 
 
@@ -133,7 +134,7 @@
     		<td><input required type="text" size="8" name="UEXLOS" id="13" value={{de.UEXLOS}}>%</td>
     		<td><input required type="text" size="8" name="TheUEXLOS" id="14" value={{de.TheUEXLOS}}>%</td>
    		</tr>
-   		</table>
+		</table>
 
 
    	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -378,7 +379,7 @@
 
   		</tr>
   		<tr>
-  			<td>Ireration</td>
+  			<td>Iteration</td>
 		    <td></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Iter}}>ppm</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Iter}}>ppm</center></td>
@@ -527,7 +528,7 @@
 
   		</tr>
   		<tr>
-  			<td>Ireration</td>
+  			<td>Iteration</td>
 		    <td></td>
 		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_TheIter}}>ppm</center></td>
 		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_TheIter}}>ppm</center></td>
@@ -644,7 +645,7 @@
   			</tr>
   			<tr>
   				<td>Financial Shrink</td>
-  				<td><center><input type="text" size="7" value={{de.TheFS}}> C/T</center></td>
+  				<td><center><input type="text" size="7" value={{de.TheFS}}> $/T</center></td>
   			</tr>
 
 
@@ -902,7 +903,884 @@
   			<td><center><input type="text" size="7" value={{de.Diff_OIC}}></center></td>
 
   		<tr>
-  			<td>Oil in <br>Winterising FA</td>
+  			<td>Oil in Winterising FA</td>
+  			<td><center><input type="text" size="7" value={{de.Diff_OIWFA}}></center></td>
+
+  		</tr>
+  		<tr>
+  			<td>Phos, Moisture, <br>IMPS</td>
+  			<td><center><input type="text" size="7" value={{de.Diff_PMI}}></center></td>
+
+  		<tr>
+  			<td>Distilate</td>
+  			<td><center><input type="text" size="7" value={{de.Diff_D}}></center></td>
+
+  		<tr>
+  			<td>Waste Water</td>
+  			<td><center><input type="text" size="7" value={{de.Diff_WW}}></center></td>
+
+  		</tr>
+  		<tr>
+  			<td>Unexplained<br> Losses</td>
+  			<td><center><input type="text" size="7" value={{de.Diff_UEXLOS}}></center></td>
+
+  		</tr>
+  		<tr>
+  			<td>Oil Output</td>
+  			<td><center><input type="text" size="7" value={{de.Diff_FLOWOP}}></center></td>
+
+  		</tr>
+  		<tr>
+  			<td>Total</td>
+  			<td><center><input type="text" size="7" value={{de.Diff_TOTAL}}></center></td>
+
+  		</tr>
+	</table>
+
+  <br>
+  <br></form>
+</div></div>
+
+<div id="print" class="tabcontent">
+	<br><br>
+	<div class="container">
+		<center><button class="btn" onclick="window.print();">Print</button></center>
+	</div><br>
+
+  <h2 align=center class="np">Print Preview</h2>
+  <br>
+<div>
+	<p class="np" align="center"><hr class="np"></p>
+	<h3 align=center>INPUT</h3>
+
+	<form action="calculate" method="post" name="myform">
+		{% csrf_token %}
+		<center>
+			<br>
+
+			<center>Oil Type : <input type="text" id="proil"></center><br>
+
+
+ 		<table style="width:33.3%" align="left">
+  		<tr>
+    		<th colspan="4"><center>PRICES</center></th>
+		</tr>
+  		<tr>
+    		<td>Crude Oil</td>
+    		<td><input required type="text" size="8" name="CO" id="1" value={{de.CO}}>$</td>
+    		<td>Physical Relief Distilate</td>
+    		<td><input required type="text" size="8" name="PRD" id="2" value={{de.PRD}}>$</td>
+    	</tr>
+		<tr>
+		    <td>Crude Tank Foots</td>
+		    <td><input required type="text" size="8" name="CTF" id="7" value={{de.CTF}}>$</td>
+		    <td>Winterising Filter Aid</td>
+		    <td><input required type="text" size="8" name="WFA" id="8" value={{de.WFA}}>$</td>
+		</tr>
+   		<tr>
+    		<td>Gums & Spent B.Caly</td>
+    		<td><input required type="text" size="8" name="GSBC" id="11" value={{de.GSBC}}>$</td>
+    		<td>Refined Oil</td>
+   			<td><input required type="text" size="8" name="RO" id="12" value={{de.RO}}>$</td>
+    	</tr>
+   		<tr>
+    		<td>Acid Oil</td>
+    		<td><input required type="text" size="8" name="AO" id="15" value={{de.AO}}>$</td>
+  		</tr>
+		</table>
+
+
+
+
+
+ 		<table style="width:33.3%" align="left">
+  		<tr>
+    		<th colspan="4"><center>Data</center></th>
+		</tr>
+  		<tr>
+   			<td>Oil FlowRate</td>
+    		<td><input required type="text" size="8" name="Flowrate" id="3" value={{de.Flowrate}}>T/Yr</td>
+   			<td>Hours Worked</td>
+    		<td><input required type="text" size="8" name="Hours" id="4" value={{de.Hours}}>Hr/Yr</td>
+    	</tr>
+		</table>
+
+
+
+
+ 		<table style="width:33.3%" align="right">
+  		<tr>
+    		<th colspan="4"><center>Other Losses</center></th>
+		</tr>
+  		<tr>
+    		<td></td>
+    		<td>Actual</td>
+    		<td>Theoretical</td>
+    	</tr>
+  		<tr>
+    		<td>Crude Tank Storage Losses('Foots')</td>
+    		<td><input required type="text" size="8" name="CTS_Losses" id="5" value={{de.CTS_Losses}}>%</td>
+    		<td><input required type="text" size="8" name="TheCTS_Losses" id="6" value={{de.TheCTS_Losses}}>%</td>
+    	</tr>
+		<tr>
+    		<td>Waste Water</td>
+    		<td><input required type="text" size="8" name="WW" id="9" value={{de.WW}}>%</td>
+    		<td><input required type="text" size="8" name="TheWW" id="10" value={{de.TheWW}}>%</td>
+   		</tr>
+   		<tr>
+    		<td>Unexplained Losses</td>
+    		<td><input required type="text" size="8" name="UEXLOS" id="13" value={{de.UEXLOS}}>%</td>
+    		<td><input required type="text" size="8" name="TheUEXLOS" id="14" value={{de.TheUEXLOS}}>%</td>
+   		</tr>
+   		</table>
+
+
+   	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<div id="myDIV" style="display: none;" >
+	<p><b>Select Process to Bypass</b></p>
+	<pre>
+	<input type="checkbox" value="hide" id="process2_col" onclick="hide_show_table(this.id);" >Neutralisation     <br>
+	<input type="checkbox" value="hide" id="process3_col" onclick="hide_show_table(this.id);" >Water Washing      <br>
+	<input type="checkbox" value="hide" id="process4_col" onclick="hide_show_table(this.id);" >Bleaching          <br>
+    <input type="checkbox" value="hide" id="process5_col" onclick="hide_show_table(this.id);" >Dry Winterising<br>
+	<input type="checkbox" value="hide" id="process6_col" onclick="hide_show_table(this.id);" >Deodorising        <br>
+	</pre>
+	</div>
+
+
+ 		<table style="width:100%" align="center">
+  		<tr>
+  			<th colspan="14"><center>Input Oil Data</center></th>
+  		</tr>
+		<tr>
+
+    	<td colspan="14"><center>Oil Flow Percent : <input required type="text" size="7" id="16" name="P1_FlowPercent" value={{de.P1_FlowPercent}}>%</center></td>
+		</tr>
+  		<tr>
+  			<th></th>
+    		<th colspan="2"><center>Super Degumming</center></th>
+		    <th colspan="2" class="process2_col"><center>Neutralisation</center></th>
+		    <th colspan="2" class="process3_col"><center>Water Washing</center></th>
+		    <th colspan="2" class="process4_col"><center>Bleaching</center></th>
+		    <th colspan="2" class="process5_col"><center>Dry Winterising</center></th>
+		    <th colspan="2" class="process6_col"><center>Deodorising</center></th>
+		    <th id="process7_col_head"><center>Iterations</center></th>
+  		</tr>
+
+
+  		<tr>
+		    <td>FFA</td>
+		    <td colspan="2"><input type="text" size="7" name="P1_Var1" id="17" value={{de.P1_Var1}}>%</td>
+		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Var1" id="18" value={{de.P2_Var1}}>%</td>
+		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Var1" id="19" value={{de.P3_Var1}}>%</td>
+		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Var1" id="20" value={{de.P4_Var1}}>%</td>
+		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Var1" id="21" value={{de.P5_Var1}}>%</td>
+		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Var1" id="22" value={{de.P6_Var1}}>%</td>
+		    <td class="process7_col"><input type="text" size="7" name="P7_Var1" id="23" value={{de.P7_Var1}}>%</td>
+  		</tr>
+
+  		<tr>
+		    <td>Phos</td>
+		    <td colspan="2"><input type="text" size="7" name="P1_Var2" id="24" value={{de.P1_Var2}}>ppm</td>
+		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Var2" id="25" value={{de.P2_Var2}}>ppm</td>
+		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Var2" id="26" value={{de.P3_Var2}}>ppm</td>
+		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Var2" id="27" value={{de.P4_Var2}}>ppm</td>
+		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Var2" id="28" value={{de.P5_Var2}}>ppm</td>
+		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Var2" id="29" value={{de.P6_Var2}}>ppm</td>
+		    <td class="process7_col"><input type="text" size="7" name="P7_Var2" id="30" value={{de.P7_Var2}}>ppm</td>
+  		</tr>
+    	<tr>
+		    <td>M & V</td>
+		    <td colspan="2"><input type="text" size="7" name="P1_Var3" id="31" value={{de.P1_Var3}}>%</td>
+		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Var3" id="32" value={{de.P2_Var3}}>%</td>
+		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Var3" id="33" value={{de.P3_Var3}}>%</td>
+		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Var3" id="34" value={{de.P4_Var3}}>%</td>
+		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Var3" id="35" value={{de.P5_Var3}}>%</td>
+		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Var3" id="36" value={{de.P6_Var3}}>%</td>
+		    <td class="process7_col"><input type="text" size="7" name="P7_Var3" id="37" value={{de.P7_Var3}}>%</td>
+  		</tr>
+    	<tr>
+		    <td>Impurities</td>
+		    <td colspan="2"><input type="text" size="7" name="P1_Impurities" id="38" value={{de.P1_Impurities}}>%</td>
+		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Impurities" id="39" value={{de.P2_Impurities}}>%</td>
+		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Impurities" id="40" value={{de.P3_Impurities}}>%</td>
+		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Impurities" id="41" value={{de.P4_Impurities}}>%</td>
+		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Impurities" id="42" value={{de.P5_Impurities}}>%</td>
+		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Impurities" id="43" value={{de.P6_Impurities}}>%</td>
+		    <td class="process7_col"><input type="text" size="7" name="P7_Impurities" id="44" value={{de.P1_Impurities}}>%</td>
+  		</tr>
+    	<tr>
+		    <td>Total Undesired Components Mass</td>
+		    <td colspan="2"><input type="text" size="7" name="P1_Mass" id="45" value={{de.P1_Mass}}>%</td>
+		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Mass" id="46" value={{de.P2_Mass}}>%</td>
+		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Mass" id="47" value={{de.P3_Mass}}>%</td>
+		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Mass" id="48" value={{de.P4_Mass}}>%</td>
+		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Mass" id="49" value={{de.P5_Mass}}>%</td>
+		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Mass" id="50" value={{de.P6_Mass}}>%</td>
+		    <td class="process7_col"></td>
+  		</tr>
+    	<tr>
+		    <td>Waxes</td>
+		    <td colspan="2"><input type="text" size="7" name="P1_Wax1" id="51" value={{de.P1_Wax1}}>ppm</td>
+		    <td colspan="2" class="process2_col"><input type="text" size="7" name="P2_Wax1" id="52" value={{de.P2_Wax1}}>ppm</td>
+		    <td colspan="2" class="process3_col"><input type="text" size="7" name="P3_Wax1" id="53" value={{de.P3_Wax1}}>ppm</td>
+		    <td colspan="2" class="process4_col"><input type="text" size="7" name="P4_Wax1" id="54" value={{de.P4_Wax1}}>ppm</td>
+		    <td colspan="2" class="process5_col"><input type="text" size="7" name="P5_Wax1" id="55" value={{de.P5_Wax1}}>ppm</td>
+		    <td colspan="2" class="process6_col"><input type="text" size="7" name="P6_Wax1" id="56" value={{de.P6_Wax1}}>ppm</td>
+		    <td class="process7_col"></td>
+  		</tr>
+  		<tr></tr>
+   		<tr>
+    		<th colspan="14"><center>Assumptions</center></th>
+
+  		</tr>
+  		<tr>
+  			<th></th>
+    		<th colspan="2"><center>Super Degumming</center></th>
+		    <th colspan="2" class="process2_col"><center>Neutralisation</center></th>
+		    <th colspan="2" class="process3_col"><center>Water Washing </center></th>
+		    <th colspan="2" class="process4_col"><center>Bleaching</center></th>
+		    <th colspan="2" class="process5_col"><center>Dry Wintering </center></th>
+		    <th colspan="2" class="process6_col"><center>Deodorising</center></th>
+		    <th class="process7_col"></th>
+  		</tr>
+   		<tr>
+		    <td></td>
+
+		    <td>Actual</td>
+		    <td>Theoretical</td>
+		    <td class="process2_col">Actual</td>
+		    <td class="process2_col">Theoretical</td>
+		    <td class="process3_col">Actual</td>
+		    <td class="process3_col">Theoretical</td>
+		    <td class="process4_col">Actual</td>
+		    <td class="process4_col">Theoretical</td>
+		    <td class="process5_col">Actual</td>
+		    <td class="process5_col">Theoretical</td>
+		    <td class="process6_col">Actual</td>
+		    <td class="process6_col">Theoretical</td>
+		    <td class="process7_col"></td>
+
+		</tr>
+   		<tr>
+		    <td>Oil and Dry Gums of SDG seperator</td>
+		    <td><input type="text" size="5" id="57" name="P1_Ass1" value={{de.P1_Ass1}}>%</td>
+		    <td><input type="text" size="5" id="58" name="P1_TheAss1" value={{de.P1_TheAss1}}>%</td>
+		    <td class="process2_col"><input type="text" size="5" id="59" name="P2_Ass1" value={{de.P2_Ass1}}>%</td>
+		    <td class="process2_col"><input type="text" size="5" id="60" name="P2_TheAss1" value={{de.P2_TheAss1}}>%</td>
+		    <td class="process3_col"><input type="text" size="5" id="61" name="P3_Ass1" value={{de.P3_Ass1}}>%</td>
+		    <td class="process3_col"><input type="text" size="5" id="62" name="P3_TheAss1" value={{de.P3_TheAss1}}>%</td>
+		    <td class="process4_col"><input type="text" size="5" id="63" name="P4_Ass1" value={{de.P4_Ass1}}>%</td>
+        	<td class="process4_col"><input type="text" size="5" id="64" name="P4_TheAss1" value={{de.P4_TheAss1}}>%</td>
+		    <td class="process5_col"><input type="text" size="5" id="65" name="P5_Ass1" value={{de.P5_Ass1}}>%</td>
+		    <td class="process5_col"><input type="text" size="5" id="66" name="P5_TheAss1" value={{de.P5_TheAss1}}>%</td>
+		    <td class="process6_col"><input type="text" size="5" id="67" name="P6_Ass1" value={{de.P6_Ass1}}>%</td>
+		    <td class="process6_col"><input type="text" size="5" id="68" name="P6_TheAss1" value={{de.P6_TheAss1}}>%</td>
+		    <td class="process7_col"></td>
+
+  		</tr>
+   		<tr>
+		    <td>Oil loss per small discharge</td>
+		    <td><input type="text" size="5" id="69" name="P1_Ass2" value={{de.P1_Ass2}}>kg</td>
+		    <td><input type="text" size="5" id="70" name="P1_TheAss2" value={{de.P1_TheAss2}}>kg</td>
+		    <td class="process2_col"><input type="text" size="5" id="71" name="P2_Ass2" value={{de.P2_Ass2}}>kg</td>
+		    <td class="process2_col"><input type="text" size="5" id="72" name="P2_TheAss2" value={{de.P2_TheAss2}}>kg</td>
+		    <td class="process3_col"><input type="text" size="5" id="73" name="P3_Ass2" value={{de.P3_Ass2}}>kg</td>
+		    <td class="process3_col"><input type="text" size="5" id="74" name="P3_TheAss2" value={{de.P3_TheAss2}}>kg</td>
+		    <td class="process4_col"><input type="text" size="5" id="75" name="P4_Ass2" value={{de.P4_Ass2}}>kg</td>
+        	<td class="process4_col"><input type="text" size="5" id="76" name="P4_TheAss2" value={{de.P4_TheAss2}}>kg</td>
+		    <td class="process5_col"><input type="text" size="5" id="77" name="P5_Ass2" value={{de.P5_Ass2}}>kg</td>
+		    <td class="process5_col"><input type="text" size="5" id="78" name="P5_TheAss2" value={{de.P5_TheAss2}}>kg</td>
+		    <td class="process6_col"><input type="text" size="5" id="79" name="P6_Ass2" value={{de.P6_Ass2}}>kg</td>
+		    <td class="process6_col"><input type="text" size="5" id="80" name="P6_TheAss2" value={{de.P6_TheAss2}}>kg</td>
+		    <td class="process7_col"></td>
+
+  		</tr>
+   		<tr>
+		    <td>Number of small discharge per hour</td>
+		    <td><input type="text" size="5" id="81" name="P1_Ass3" value={{de.P1_Ass3}}></td>
+		    <td><input type="text" size="5" id="82" name="P1_TheAss3" value={{de.P1_TheAss3}}></td>
+		    <td class="process2_col"><input type="text" size="5" id="83" name="P2_Ass3" value={{de.P2_Ass3}}></td>
+		    <td class="process2_col"><input type="text" size="5" id="84" name="P2_TheAss3" value={{de.P2_TheAss3}}></td>
+		    <td class="process3_col"><input type="text" size="5" id="85" name="P3_Ass3" value={{de.P3_Ass3}}></td>
+		    <td class="process3_col"><input type="text" size="5" id="86" name="P3_TheAss3" value={{de.P3_TheAss3}}></td>
+		    <td class="process4_col"><input type="text" size="5" id="87" name="P4_Ass3" value={{de.P4_Ass3}}></td>
+		    <td class="process4_col"><input type="text" size="5" id="88" name="P4_TheAss3" value={{de.P4_TheAss3}}></td>
+		    <td class="process5_col"><input type="text" size="5" id="89" name="P5_Ass3" value={{de.P5_Ass3}}></td>
+		    <td class="process5_col"><input type="text" size="5" id="90" name="P5_TheAss3" value={{de.P5_TheAss3}}></td>
+		    <td class="process6_col"><input type="text" size="5" id="91" name="P6_Ass3" value={{de.P6_Ass3}}></td>
+		    <td class="process6_col"><input type="text" size="5" id="92" name="P6_TheAss3" value={{de.P6_TheAss3}}></td>
+		    <td class="process7_col"></td>
+
+		</tr>
+		<tr>
+		    <td>Average oil flow per hour</td>
+		    <td><input type="text" size="5" id="93" name="P1_Ass4" value={{de.P1_Ass4}}>T/hr</td>
+		    <td><input type="text" size="5" id="94" name="P1_TheAss4" value={{de.P1_TheAss4}}>T/hr</td>
+		    <td class="process2_col"><input type="text" size="5" id="95" name="P2_Ass4" value={{de.P2_Ass4}}>T/hr</td>
+		    <td class="process2_col"><input type="text" size="5" id="96" name="P2_TheAss4" value={{de.P2_TheAss4}}>T/hr</td>
+		    <td class="process3_col"><input type="text" size="5" id="97" name="P3_Ass4" value={{de.P3_Ass4}}>T/hr</td>
+		    <td class="process3_col"><input type="text" size="5" id="98" name="P3_TheAss4" value={{de.P3_TheAss4}}>T/hr</td>
+		    <td class="process4_col"><input type="text" size="5" id="99" name="P4_Ass4" value={{de.P4_Ass4}}>T/hr</td>
+		    <td class="process4_col"><input type="text" size="5" id="100" name="P4_TheAss4" value={{de.P4_TheAss4}}>T/hr</td>
+		    <td class="process5_col"><input type="text" size="5" id="101" name="P5_Ass4" value={{de.P5_Ass4}}>T/hr</td>
+		    <td class="process5_col"><input type="text" size="5" id="102" name="P5_TheAss4" value={{de.P5_TheAss4}}>T/hr</td>
+		    <td class="process6_col"><input type="text" size="5" id="103" name="P6_Ass4" value={{de.P6_Ass4}}>T/hr</td>
+		    <td class="process6_col"><input type="text" size="5" id="104" name="P6_TheAss4" value={{de.P6_TheAss4}}>T/hr</td>
+		    <td class="process7_col"></td>
+
+		</tr>
+		</table>
+		<br>
+
+</form>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div>
+  <h3 align=center>Actual Data</h3>
+  <br>
+	<form>
+ 		<table style="width:100%" align="center">
+  		<tr>
+  			<th colspan="7"><center>Calculations</center></th>
+  		</tr>
+  		<tr>
+  			<th></th>
+    		<th><center>Super Degumming</center></th>
+		    <th class="process2_col"><center>Neutralisation</center></th>
+		    <th class="process3_col"><center>Water Washing </center></th>
+		    <th class="process4_col"><center>Bleaching</center></th>
+		    <th class="process5_col"><center>Dry Wintering </center></th>
+		    <th class="process6_col"><center>Deodorising</center></th>
+
+  		</tr>
+  		<tr>
+  			<td>Iteration</td>
+		    <td></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Iter}}>ppm</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Iter}}>ppm</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_Iter}}>ppm</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_Iter}}>ppm</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_Iter}}>ppm</center></td>
+  		</tr>
+  		<tr>
+  			<td>FlowPercent</td>
+		    <td><center><input type="text" size="7" value={{de.P1_FlowPercent}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_FlowPercent}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_FlowPercent}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_FlowPercent}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_FlowPercent}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_FlowPercent}}>%</center></td>
+  		</tr>
+  		<tr>
+  			<td>Phos Removed</td>
+		    <td><center><input type="text" size="7" value={{de.P1_calc1}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_calc1}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_calc1}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_calc1}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_calc1}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_calc1}}>%</center></td>
+  		</tr>
+  		<tr>
+  			<td>Phos Removed (Using factor of 30%)</td>
+		    <td><center><input type="text" size="7" value={{de.P1_calc1withfactor}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_calc1withfactor}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_calc1withfactor}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_calc1withfactor}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_calc1withfactor}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_calc1withfactor}}>%</center></td>
+  		</tr>
+  		<tr>
+  			<td>Neutral Oil Loss% + FFA Loss(Without Discharges)</td>
+		    <td><center><input type="text" size="7" value={{de.P1_Loss1}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Loss1}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Loss1}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_Loss1}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_Loss1}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_Loss1}}>%</center></td>
+  		</tr>
+  		<tr>
+  			<td>Neutral Oil Loss% + FFA Loss(With Discharges)</td>
+		    <td><center><input type="text" size="7" value={{de.P1_Loss1withfactor}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Loss1withfactor}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Loss1withfactor}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_Loss1withfactor}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_Loss1withfactor}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_Loss1withfactor}}>%</center></td>
+  		</tr>
+  		<tr>
+  			<td>Impurities</td>
+		    <td><center><input type="text" size="7" value={{de.P1_calc2}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_calc2}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_calc2}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_calc2}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_calc2}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_calc2}}>%</center></td>
+  		</tr>
+  		<tr>
+  			<td>M & V Loss</td>
+		    <td><center><input type="text" size="7" value={{de.P1_calc3}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_calc3}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_calc3}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_calc3}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_calc3}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_calc3}}>%</center></td>
+  		</tr>
+  		<tr>
+  			<td>Wax Loss</td>
+		    <td><center><input type="text" size="7" value={{de.P1_calc4}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_calc4}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_calc4}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_calc4}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_calc4}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_calc4}}>%</center></td>
+  		</tr>
+  		<tr>
+  			<td>Yield Loss</td>
+		    <td><center><input type="text" size="7" value={{de.P1_calc5}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_calc5}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_calc5}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_calc5}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_calc5}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_calc5}}>%</center></td>
+  		</tr>
+  		</table>
+
+  	<br>
+  	<br>
+
+
+  		<table style="width:20%" align="center">
+  			<tr>
+  				<th colspan="2"><center> Overall Yield Analysis Table</center></th>
+  			</tr>
+  			<tr>
+  				<td>Total Undesired Components Mass</td>
+  				<td><center><input type="text" size="7" value={{de.TUCMASS}}>%</center></td>
+  			</tr>
+  			<tr>
+  				<td>Oil Flow Loss</td>
+  				<td><center><input type="text" size="7" value={{de.FLOWLOSS}}>%</center></td>
+  			</tr>
+  			<tr>
+  				<td>Yield</td>
+  				<td><center><input type="text" size="7" value={{de.YIELD}}>%</center></td>
+  			</tr>
+  			<tr>
+  				<td>Total Undesired Components Mass</td>
+  				<td><center><input type="text" size="7" value={{de.TUCFACT}}></center></td>
+  			</tr>
+  			<tr>
+  				<td>Financial Shrink</td>
+  				<td><center><input type="text" size="7" value={{de.FS}}> $/T</center></td>
+  			</tr>
+
+
+
+
+  		</table>
+
+  	<br>
+  	<br>
+
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div>
+  <h3 align=center>Theoretical Data</h3>
+  <br>
+
+ 		<table style="width:100%" align="center">
+  		<tr>
+  			<th colspan="7"><center>Calculations</center></th>
+  		</tr>
+  		<tr>
+  			<th></th>
+    		<th><center>Super Degumming</center></th>
+		    <th class="process2_col"><center>Neutralisation</center></th>
+		    <th class="process3_col"><center>Water Washing </center></th>
+		    <th class="process4_col"><center>Bleaching</center></th>
+		    <th class="process5_col"><center>Dry Wintering </center></th>
+		    <th class="process6_col"><center>Deodorising</center></th>
+
+  		</tr>
+  		<tr>
+  			<td>Iteration</td>
+		    <td></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_TheIter}}>ppm</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_TheIter}}>ppm</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_TheIter}}>ppm</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_TheIter}}>ppm</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_TheIter}}>ppm</center></td>
+  		</tr>
+  		<tr>
+  			<td>Oil Flow%</td>
+		    <td><center><input type="text" size="7" value={{de.P1_FlowPercent}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_TheFlowPercent}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_TheFlowPercent}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_TheFlowPercent}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_TheFlowPercent}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_TheFlowPercent}}>%</center></td>
+  		</tr>
+  		<tr>
+  			<td>Phos Removed</td>
+		    <td><center><input type="text" size="7" value={{de.P1_Thecalc1}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Thecalc1}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Thecalc1}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_Thecalc1}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_Thecalc1}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_Thecalc1}}>%</center></td>
+  		</tr>
+  		<tr>
+  			<td>Phos Removed (Using factor of 30%)</td>
+		    <td><center><input type="text" size="7" value={{de.P1_Thecalc1withfactor}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Thecalc1withfactor}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Thecalc1withfactor}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_Thecalc1withfactor}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_Thecalc1withfactor}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_Thecalc1withfactor}}>%</center></td>
+  		</tr>
+  		<tr>
+  			<td>Neutral Oil Loss% + FFA Loss(Without Discharges)</td>
+		    <td><center><input type="text" size="7" value={{de.P1_TheLoss1}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_TheLoss1}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_TheLoss1}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_TheLoss1}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_TheLoss1}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_TheLoss1}}>%</center></td>
+  		</tr>
+  		<tr>
+  			<td>Neutral Oil Loss% + FFA Loss(With Discharges)</td>
+		    <td><center><input type="text" size="7" value={{de.P1_TheLoss1withfactor}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_TheLoss1withfactor}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_TheLoss1withfactor}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_TheLoss1withfactor}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_TheLoss1withfactor}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_TheLoss1withfactor}}>%</center></td>
+  		</tr>
+  		<tr>
+  			<td>Impurities</td>
+		    <td><center><input type="text" size="7" value={{de.P1_Thecalc2}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Thecalc2}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Thecalc2}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_Thecalc2}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_Thecalc2}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_Thecalc2}}>%</center></td>
+  		</tr>
+  		<tr>
+  			<td>M & V Loss</td>
+		    <td><center><input type="text" size="7" value={{de.P1_Thecalc3}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Thecalc3}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Thecalc3}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_Thecalc3}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_Thecalc3}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_Thecalc3}}>%</center></td>
+  		</tr>
+  		<tr>
+  			<td>Wax Loss</td>
+		    <td><center><input type="text" size="7" value={{de.P1_Thecalc4}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Thecalc4}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Thecalc4}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_Thecalc4}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_Thecalc4}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_Thecalc4}}>%</center></td>
+  		</tr>
+  		<tr>
+  			<td>Yield Loss</td>
+		    <td><center><input type="text" size="7" value={{de.P1_Thecalc5}}>%</center></td>
+		    <td class="process2_col"><center><input type="text" size="7" value={{de.P2_Thecalc5}}>%</center></td>
+		    <td class="process3_col"><center><input type="text" size="7" value={{de.P3_Thecalc5}}>%</center></td>
+		    <td class="process4_col"><center><input type="text" size="7" value={{de.P4_Thecalc5}}>%</center></td>
+		    <td class="process5_col"><center><input type="text" size="7" value={{de.P5_Thecalc5}}>%</center></td>
+		    <td class="process6_col"><center><input type="text" size="7" value={{de.P6_Thecalc5}}>%</center></td>
+  		</tr>
+  		</table>
+
+  	<br>
+  	<br>
+
+
+  		<table style="width:20%" align="center">
+  			<tr>
+  				<th colspan="2"><center>Overall Yield Analysis Table</center></th>
+  			</tr>
+  			<tr>
+  				<td>Total Undesired Components Mass</td>
+  				<td><center><input type="text" size="7" value={{de.TheTUCMASS}}>%</center></td>
+  			</tr>
+  			<tr>
+  				<td>Oil Flow Loss</td>
+  				<td><center><input type="text" size="7" value={{de.TheFLOWLOSS}}>%</center></td>
+  			</tr>
+  			<tr>
+  				<td>Yield</td>
+  				<td><center><input type="text" size="7" value={{de.TheYIELD}}>%</center></td>
+  			</tr>
+  			<tr>
+  				<td>Total Undesired Components Mass</td>
+  				<td><center><input type="text" size="7" value={{de.TheTUCFACT}}></center></td>
+  			</tr>
+  			<tr>
+  				<td>Financial Shrink</td>
+  				<td><center><input type="text" size="7" value={{de.TheFS}}> $/T</center></td>
+  			</tr>
+
+
+
+
+  		</table>
+
+  	<br>
+  	<br>
+
+</div>
+<br><br><br><br><br><br><br><br><br>
+
+<div>
+  <h3 align=center>Summary</h3>
+  <br>
+
+  	<table style="width:35.8%" align="left">
+  		<tr>
+  			<th colspan="5"><center>ACTUAL Summary</center></th>
+  		</tr>
+  		<tr>
+  			<td colspan="3"><center>Oil Mass Balance</center></td>
+  			<td ><center>Values (KE)</center></td>
+  			<td ><center>Financial Shrink Losses ($/T)</center></td>
+  		</tr>
+  		<tr>
+  			<td></td>
+  			<td><center>T/Yr</center></td>
+  			<td><center>%</center></td>
+  			<td colspan="3"></td>
+  		</tr>
+  		<tr>
+  			<td>Oil Input</td>
+  			<td><center><input type="text" size="7" value={{de.A_OInput}}></center></td>
+  			<td colspan="3"></td>
+  		</tr>
+  		<tr>
+  			<td>Oil Loss in Crude Tank</td>
+  			<td><center><input type="text" size="7" value={{de.A_OLCT}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_OLCT}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_OLCT}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_OLCT}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>SDG Gums</td>
+  			<td><center><input type="text" size="7" value={{de.A_SDGG}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_SDGG}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_SDGG}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_SDGG}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Acid Oil</td>
+  			<td><center><input type="text" size="7" value={{de.A_AO}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_AO}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_AO}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_AO}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Oil in Clay</td>
+  			<td><center><input type="text" size="7" value={{de.A_OIC}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_OIC}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_OIC}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_OIC}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Oil in Winterising FA</td>
+  			<td><center><input type="text" size="7" value={{de.A_OIWFA}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_OIWFA}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_OIWFA}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_OIWFA}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Phos, Moisture, IMPS</td>
+  			<td><center><input type="text" size="7" value={{de.A_PMI}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_PMI}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_PMI}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_PMI}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Distilate</td>
+  			<td><center><input type="text" size="7" value={{de.A_D}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_D}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_D}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_D}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Waste Water</td>
+  			<td><center><input type="text" size="7" value={{de.A_WW}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_WW}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_WW}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_WW}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Unexplained Losses</td>
+  			<td><center><input type="text" size="7" value={{de.A_UEXLOS}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_UEXLOS}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_UEXLOS}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_UEXLOS}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Oil Output</td>
+  			<td><center><input type="text" size="7" value={{de.A_FLOWOP}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_FLOWOP}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_FLOWOP}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_FLOWOP}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Total</td>
+  			<td><center><input type="text" size="7" value={{de.A_TOTAL}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_TOTAL}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_TOTAL}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_TOTAL}}></center></td>
+  		</tr>
+  	</table>
+
+
+  	<table style="width:35.8%" align="left">
+  		<tr>
+  			<th colspan="5"><center>THEORETICAL Summary</center></th>
+  		</tr>
+  		<tr>
+  			<td colspan="3"><center>Oil Mass Balance</center></td>
+  			<td ><center>Values (KE)</center></td>
+  			<td ><center>Financial Shrink Losses ($/T)</center></td>
+  		</tr>
+  		<tr>
+  			<td></td>
+  			<td><center>T/Yr</center></td>
+  			<td><center>%</center></td>
+  			<td colspan="3"></td>
+  		</tr>
+  		<tr>
+  			<td>Oil Input</td>
+  			<td><center><input type="text" size="7" value={{de.A_TheOInput}}></center></td>
+  			<td colspan="3"></td>
+  		</tr>
+  		<tr>
+  			<td>Oil Loss in Crude Tank</td>
+  			<td><center><input type="text" size="7" value={{de.A_TheOLCT}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_TheOLCT}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_TheOLCT}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_TheOLCT}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>SDG Gums</td>
+  			<td><center><input type="text" size="7" value={{de.A_TheSDGG}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_TheSDGG}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_TheSDGG}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_TheSDGG}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Acid Oil</td>
+  			<td><center><input type="text" size="7" value={{de.A_TheAO}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_TheAO}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_TheAO}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_TheAO}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Oil in Clay</td>
+  			<td><center><input type="text" size="7" value={{de.A_TheOIC}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_TheOIC}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_TheOIC}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_TheOIC}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Oil in Winterising FA</td>
+  			<td><center><input type="text" size="7" value={{de.A_TheOIWFA}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_TheOIWFA}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_TheOIWFA}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_TheOIWFA}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Phos, Moisture, IMPS</td>
+  			<td><center><input type="text" size="7" value={{de.A_ThePMI}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_ThePMI}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_ThePMI}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_ThePMI}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Distilate</td>
+  			<td><center><input type="text" size="7" value={{de.A_TheD}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_TheD}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_TheD}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_TheD}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Waste Water</td>
+  			<td><center><input type="text" size="7" value={{de.A_TheWW}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_TheWW}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_TheWW}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_TheWW}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Unexplained Losses</td>
+  			<td><center><input type="text" size="7" value={{de.A_TheUEXLOS}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_TheUEXLOS}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_TheUEXLOS}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_TheUEXLOS}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Oil Output</td>
+  			<td><center><input type="text" size="7" value={{de.A_TheFLOWOP}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_TheFLOWOP}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_TheFLOWOP}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_TheFLOWOP}}></center></td>
+  		</tr>
+  		<tr>
+  			<td>Total</td>
+  			<td><center><input type="text" size="7" value={{de.A_TheTOTAL}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.B_TheTOTAL}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.C_TheTOTAL}}></center></td>
+  			<td><center><input type="text" size="7" value={{de.D_TheTOTAL}}></center></td>
+  		</tr>
+  	</table>
+
+
+  	<table style="width:28.3%" >
+  		<tr>
+  			<th colspan="2"><center>Difference Summary</center></th>
+  		</tr>
+  		<tr>
+  			<td colspan="2"><center>Delta Values<br>Theoretical - Actual</center></td>
+
+
+  		</tr>
+  		<tr>
+  			<td></td>
+  			<td colspan="2"><center>In '000 $/Yr</center></td>
+
+  		</tr>
+  		<tr>
+  			<td>Oil Input</td>
+			<td><center><input type="text" size="7" value='N/A'></td></center></td>
+
+
+  		</tr>
+  		<tr>
+  			<td>Oil Loss in <br>Crude Tank</td>
+  			<td><center><input type="text" size="7" value={{de.Diff_OLCT}}></center></td>
+
+  		</tr>
+  		<tr>
+  			<td>SDG Gums</td>
+  			<td><center><input type="text" size="7" value={{de.Diff_SDGG}}></center></td>
+
+  		</tr>
+  		<tr>
+  			<td>Acid Oil</td>
+  			<td><center><input type="text" size="7" value={{de.Diff_AO}}></center></td>
+
+  		</tr>
+  		<tr>
+  			<td>Oil in Clay</td>
+  			<td><center><input type="text" size="7" value={{de.Diff_OIC}}></center></td>
+
+  		<tr>
+  			<td>Oil in Winterising FA</td>
   			<td><center><input type="text" size="7" value={{de.Diff_OIWFA}}></center></td>
 
   		</tr>
@@ -937,10 +1815,12 @@
   	</table>
 
   <br>
-  <br>
+  <br></form>
 </div>
-</form>
-<h5 align=center>Developed & Proprietery of Test Site UK</h5>
+
+
+</div>
+<h5 align=center>Developed & Proprietery of Test Site</h5>
 
 <script>
 function openCity(evt, cityName) {
@@ -965,4 +1845,5 @@ getdata();
 </script>
 
 </body>
-</html> 
+</html>
+
