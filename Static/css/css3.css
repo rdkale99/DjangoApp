@@ -80,13 +80,12 @@ section{
   border-top: none;
   outline: none;
   outline: 0;
-} 
-
-.tabcontent {
-  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+   animation: fadeEffect 1s; /* Fading effect takes 1 second */
   outline: none;
   outline: 0;
-}
+} 
+
+
 
 /* Go from zero to full opacity */
 @keyframes fadeEffect {
@@ -108,7 +107,7 @@ td {
     border: 1px solid black;
 	padding: 7px;
 	background-color: rgba(255,255,255,0.2);
-	color: #fff;
+	color: black;
 }
 
 th {
@@ -174,11 +173,31 @@ tbody {
 }
 
 .container .btn:hover {
-    border: 1px solid black;
+  border: 1px solid black;
   background: -webkit-linear-gradient(left, #25c482, #25b7c3);
   background: linear-gradient(to right, #25c482, #25b7c3);
   color: darkslategray;
 }
 
-
-
+@media print
+{
+    .np{display:none;}
+    h5{display:none;}
+    .container{display:none;}
+    h1{display:none;}
+    .tabcontent {
+        display: block;
+    }
+    .tab{display: none;}
+    html
+    {
+        transform: scale(1.0);transform-origin: 0 0;
+    }
+    @page
+    {
+        size: 297mm 210mm; /* landscape */
+        /* you can also specify margins here: */
+        margin: 0mm;
+        margin-right: 0mm; /* for compatibility with both A4 and Letter */
+    }
+}
