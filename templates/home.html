@@ -32,10 +32,20 @@
 
 
 <div id="Input" class="tabcontent">
-	<h3 align=center>INPUT</h3>
 
 	<form action="calculate" method="post" name="myform">
 		{% csrf_token %}
+		  <br><br><br><div class="container1">
+			<input type=reset value="Reset" class="btn" onclick="resetinput();">
+		</div>
+		<div class="container">
+			<input type=submit value="Run Calculator" class="btn" align="right">
+	   </div>
+<br>
+		<br>
+		<h3 align=center>INPUT</h3>
+
+
 		<center>
 			<br>
 		<a href="#" onClick="autoFill(); return true;" >Click to Autofill</a>
@@ -345,16 +355,7 @@
 		<br>
 
 
-	<br>
 
-
-	<div class="container">
-  		<center><input type=submit value="Run Calculator" class="btn"></center>
-	</div>	<br><br><br><br>
-		<div class="container">
-  		<center><input type=reset value="Reset" class="btn" onclick="resetinput();"></center>
-	</div>
-<br>
 
 <br>
 </form>
@@ -943,11 +944,11 @@
 
 <div id="print" class="tabcontent">
 	<br><br>
-	<div class="container">
+	<div class="container2">
 		<center><button class="btn" onclick="window.print();">Print</button></center>
 	</div><br>
 
-  <center><h2 align=center class="np">Print Preview<h4><pre>  *print in landscape is recommended</pre></h4></h2></center>
+  <center><h2 align=center class="np">Print Preview<h4><pre class="np">  *print in landscape is recommended</pre></h4></h2></center>
 
 <div>
 	<p class="np" align="center"><hr class="np"></p>
@@ -1740,7 +1741,7 @@
   	</table>
 
 
-  	<table style="width:28.3%" >
+  	<table style="width:28.1%" >
   		<tr>
   			<th colspan="2"><center>Difference Summary</center></th>
   		</tr>
