@@ -148,8 +148,6 @@ tbody {
 	}
 }
 
-
-
 .container {
   position: relative;
   width: 100%;
@@ -158,8 +156,8 @@ tbody {
 
 .container .btn {
   position: absolute;
-  top: 185%;
-  left: 185%;
+  top: 400%;
+  left: 300%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: #f1f1f1;
@@ -179,6 +177,65 @@ tbody {
   color: darkslategray;
 }
 
+.container2 {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container2 .btn {
+  position: absolute;
+  top: 185%;
+  left: 185%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container2 .btn:hover {
+  border: 1px solid black;
+  background: -webkit-linear-gradient(left, #25c482, #25b7c3);
+  background: linear-gradient(to right, #25c482, #25b7c3);
+  color: darkslategray;
+}
+
+
+.container1 {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container1 .btn {
+  position: absolute;
+  top: 100%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container1 .btn:hover {
+  border: 1px solid black;
+  background: -webkit-linear-gradient(left, #25c482, #25b7c3);
+  background: linear-gradient(to right, #25c482, #25b7c3);
+  color: darkslategray;
+}
+
 
 .pagebreak{
     clear: both;
@@ -192,7 +249,7 @@ tbody {
     }
     .np{display:none;}
     h5{display:none;}
-    .container{display:none;}
+    .container3{display:none;}
     h1{display:none;}
     .tabcontent {
         display: block;
@@ -200,7 +257,7 @@ tbody {
     .tab{display: none;}
     html
     {
-        transform: scale(.9);transform-origin: 0 0;
+        transform: scale(1.0);transform-origin: 0 0;
     }
 
 
